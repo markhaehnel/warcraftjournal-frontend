@@ -1,0 +1,71 @@
+@import 'variables.scss';
+@import 'visibility.css';
+
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+    border-bottom: 1px dotted #666;
+}
+
+a:hover {
+    border-bottom: 1px solid #666;
+}
+
+.container {
+    padding: 0 8px;
+    max-width: 1280px;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.background-dimmed {
+    background-color: $backgroundColorDim;
+}
+
+a.button {
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #eee;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+a.button:hover {
+    background-color: #ddd;
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.dropshadow {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
