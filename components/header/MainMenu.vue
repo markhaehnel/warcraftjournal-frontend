@@ -1,5 +1,6 @@
 <template>
-    <nav class="dropdown clearfix">
+    <nav id="menuDropdown" class="dropdown clearfix">
+        <!--
         <button class="dropdown-button">
             <svg x="0px" y="0px" width="18px" height="12px" viewBox="0 0 18 12">
                 <g>
@@ -10,9 +11,25 @@
             </svg>
             <span class="hidden-xs"> MENU</span>
         </button>
+        
         <div class="dropdown-content">
             <nuxt-link to="/">Home</nuxt-link>
-            <nuxt-link to="/about">About</nuxt-link>
+            <nuxt-link to="/buildings">Buildings</nuxt-link>
+        </div>
+        -->
+
+        <button @click="toggleMenu" class="dropdown-button">
+            <svg x="0px" y="0px" width="18px" height="12px" viewBox="0 0 18 12">
+                <g>
+                    <rect id="top-bar" fill="black" width="18" height="2"/>
+                    <rect id="middle-bar" fill="black"  y="5" width="18" height="2"/>
+                    <rect id="bottom-bar" fill="black"  y="10" width="18" height="2"/>
+                </g>
+            </svg>
+        </button>
+        <div class="dropdown-content">
+            <a href="/">Home</a>
+            <a href="/buildings">Buildings</a>
         </div>
     </nav>
 </template>
@@ -21,6 +38,11 @@
 import Palette from '~components/decorations/Palette.vue'
 
 export default {
+    methods: {
+        toggleMenu: () => {
+            document.getElementById('menuDropdown').classList.toggle('show')
+        }
+    },
     components: {
         Palette
     }
@@ -47,7 +69,8 @@ export default {
         cursor: pointer;
         font-size: 1em;
         height: 100%;
-        padding: 16px;
+        width: 64px;
+        padding: 15px 0;
         transition: all 0.25s;
 
         svg {
@@ -94,14 +117,25 @@ export default {
     }
 
     .dropdown:hover {
+        .dropdown-button {
+            background-color: lightgray;
+        }
+    }
+
+    .show {
         .dropdown-content {
             display: block;
         }
 
         .dropdown-button {
-            background-color: black;
+            background-color: black !important;
             color: white;
+            
+            @media (min-width: $mobileMaxWidth) {
+                width: 160px;
+            }
         }
+
 
         .dropdown-button svg {
             filter: invert(100%);
@@ -125,4 +159,9 @@ export default {
         font-style: italic;
     }
 
+    @media (max-width: $mobileMaxWidth) {
+        .dropdown-content {
+            width: 100vw;
+        }
+    }
 </style>

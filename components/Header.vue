@@ -23,6 +23,9 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/css/variables.scss';
 
+.dropshadow {
+}
+
 .top-bar {
     height: 5px;
     background-color: #000;
@@ -38,7 +41,7 @@ export default {
     margin-left: 16px;
     display: inline-block;
     line-height: 50px;
-    font-weight: 600;
+    font-weight: 400;
     border: none;
 }
 
@@ -46,7 +49,7 @@ export default {
     display:inline-block;
 }
 
-@media (max-width:767px) {
+@media (max-width: $mobileMaxWidth) {
     .brand {
         font-size: 1.4em;
     }

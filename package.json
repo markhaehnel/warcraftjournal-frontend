@@ -5,7 +5,7 @@
     "author": "Mark Hähnel <hello@markhaehnel.de> (https://markhaehnel.de/)",
     "private": true,
     "scripts": {
-        "dev": "nuxt",
+        "dev": "cross-env HOST=0.0.0.0 nuxt",
         "build": "nuxt build",
         "start": "nuxt start",
         "generate": "nuxt generate",
@@ -14,19 +14,21 @@
     },
     "dependencies": {
         "axios": "^0.16.2",
+        "cross-env": "^5.0.1",
+        "normalize-css": "^2.3.1",
         "nuxt": "1.0.0-alpha.4"
     },
     "devDependencies": {
         "babel-eslint": "^7.2.3",
-        "eslint": "^3.19.0",
+        "eslint": "^4.0.0",
         "eslint-config-standard": "^10.2.1",
-        "eslint-loader": "^1.7.1",
-        "eslint-plugin-html": "^2.0.3",
+        "eslint-loader": "^1.8.0",
+        "eslint-plugin-html": "^3.0.0",
         "eslint-plugin-import": "^2.3.0",
         "eslint-plugin-node": "^5.0.0",
         "eslint-plugin-promise": "^3.5.0",
         "eslint-plugin-standard": "^3.0.1",
         "node-sass": "^4.5.3",
-        "sass-loader": "^6.0.5"
+        "sass-loader": "^6.0.6"
     }
 }
