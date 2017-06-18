@@ -1,7 +1,7 @@
 <template>
     <div class="text-centered">
         <h1>Building Overview</h1>
-        <p>Statistics and calculations on World of Warcraft guild and player data.</p>
+        <p>Status of Broken Shore Buildings.</p>
 
         <Building name="Mage Tower" :building="magetower" />
         <Building name="Command Center" :building="commandcenter" />
