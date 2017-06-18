@@ -23,9 +23,6 @@ export default {
 <style lang="scss" scoped>
 @import '~assets/css/variables.scss';
 
-.dropshadow {
-}
-
 .top-bar {
     height: 5px;
     background-color: #000;

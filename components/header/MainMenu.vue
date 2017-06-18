@@ -1,23 +1,5 @@
 <template>
     <nav id="menuDropdown" class="dropdown clearfix">
-        <!--
-        <button class="dropdown-button">
-            <svg x="0px" y="0px" width="18px" height="12px" viewBox="0 0 18 12">
-                <g>
-                    <rect id="top-bar" fill="black" width="18" height="2"/>
-                    <rect id="middle-bar" fill="black"  y="5" width="18" height="2"/>
-                    <rect id="bottom-bar" fill="black"  y="10" width="18" height="2"/>
-                </g>
-            </svg>
-            <span class="hidden-xs"> MENU</span>
-        </button>
-        
-        <div class="dropdown-content">
-            <nuxt-link to="/">Home</nuxt-link>
-            <nuxt-link to="/buildings">Buildings</nuxt-link>
-        </div>
-        -->
-
         <button @click="toggleMenu" class="dropdown-button">
             <svg x="0px" y="0px" width="18px" height="12px" viewBox="0 0 18 12">
                 <g>
