@@ -40,5 +40,8 @@ module.exports = {
             }
         }
     },
-    loading: false
+    loading: false,
+    env: {
+        baseUrl: process.env.API_URL
+    }
 }

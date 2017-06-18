@@ -12,20 +12,18 @@
 </template>
 
 <script>
-import axios from 'axios'
+import api from '~plugins/axios'
 import Building from '~components/buildings/Building.vue'
 
 export default {
     async asyncData () {
-        let { data } = await axios.get('http://localhost:3001/buildings')
-
-        console.log(data)
+        let { data } = await api.get('/buildings')
 
         return {
             magetower: data.magetower,
             commandcenter: data.commandcenter,
             netherdisruptor: data.netherdisruptor,
-            lastupdated: new Date(data.lastupdated).toLocaleTimeString()
+            lastupdated: data.lastupdated
         }
     },
     components: {
