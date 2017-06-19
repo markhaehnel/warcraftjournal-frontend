@@ -1,5 +1,7 @@
 {
-    "dokku": {
-        "predeploy": "nuxt build"
+    "scripts": {
+        "dokku": {
+            "predeploy": "nuxt build"
+        }
     }
 }
