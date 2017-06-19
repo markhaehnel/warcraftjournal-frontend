@@ -19,9 +19,7 @@
         "node-sass": "^4.5.3",
         "normalize-css": "^2.3.1",
         "nuxt": "1.0.0-alpha.4",
-        "sass-loader": "^6.0.6"
-    },
-    "devDependencies": {
+        "sass-loader": "^6.0.6",
         "babel-eslint": "^7.2.3",
         "eslint": "3.19.0",
         "eslint-config-standard": "^10.2.1",
