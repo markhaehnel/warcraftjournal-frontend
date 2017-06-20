@@ -2,7 +2,9 @@
     <div class="site">
         <div class="site-content">
             <site-header />
-            <nuxt />
+            <div class="container">
+                <nuxt />
+            </div>
         </div>
         <site-footer />
     </div>
@@ -19,14 +21,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.site {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-.site-content {
-    flex: 1;
-}
-</style>

@@ -1,54 +1,31 @@
 <template>
-    <div class="dropshadow">
-        <div class="top-bar" />
-        <header class="container centered">
-            <main-menu />
-            <div class="brand-container">
-                <nuxt-link to="/" class="brand">The Warcraft Journal</nuxt-link>
+    <nav class="navbar navbar-toggleable-xl navbar-light dropshadow ">
+        <div class="container">
+            <h1 class="navbar-brand mb-0" href="#">The Warcraft Journal</h1>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+                <nuxt-link class="nav-link" to="/buildings">Buildings</nuxt-link>
             </div>
-        </header>
-    </div>
+        </div>
+    </nav>
 </template>
 
-<script>
-import MainMenu from '~components/header/MainMenu.vue'
-
-export default {
-    components: {
-        MainMenu
-    }
-}
-</script>
-
-<style lang="scss" scoped>
-@import '~assets/css/variables.scss';
-
-.top-bar {
-    height: 5px;
-    background-color: #000;
-    margin: 0;
-    padding: 0;
-    display: block;
+<style lang="less">
+@import '~assets/less/variables.less';
+.navbar {
+    margin-bottom: 2rem;
 }
 
-.brand {
-    font-family: 'Bree Serif',serif;
-    font-size: 2em;
-    margin: 0;
-    margin-left: 16px;
-    display: inline-block;
-    line-height: 50px;
-    font-weight: 400;
-    border: none;
+h1.navbar-brand {
+    font-family: @fontHeading;
+    font-weight: 700;
 }
 
-.brand-container {
-    display:inline-block;
+.nav-link:hover {
+    text-decoration: underline;
 }
 
-@media (max-width: $mobileMaxWidth) {
-    .brand {
-        font-size: 1.4em;
-    }
+.dropshadow {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 </style>

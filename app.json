@@ -1,7 +1,7 @@
 {
     "scripts": {
         "dokku": {
-            "predeploy": "npm rebuild node-sass && nuxt build"
+            "predeploy": "nuxt build"
         }
     }
 }

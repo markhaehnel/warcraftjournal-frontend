@@ -1,17 +1,22 @@
 <template>
-    <div class="building-box">
-        <h2>{{ name }}</h2>
-        <p>{{ state }}</p>
-        <h1>{{ progress }}%</h1>
+    <div class="card card-inverse">
+        <img class="card-img" src="~assets/images/brokenshore.jpg">
+        <div class="card-img-overlay">
+            <h4 class="card-title">{{ name }}</h4>
+            <h6 class="card-text">{{ state }}</h6>
+        </div>
+            <div class="progress">
+                <div class="progress-bar bg-success" v-bind:style="{ width: progress + '%'}" style="height: 24px;" />
+            </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['name', 'building'],
+    props: ['name', 'buildingtype'],
     computed: {
         state () {
-            switch (this.building.state) {
+            switch (this.$store.state.buildings[this.buildingtype].state) {
             case 1: return 'Under Construction'
             case 2: return 'Active'
             case 3: return 'Under Attack'
@@ -20,27 +25,8 @@ export default {
             }
         },
         progress () {
-            return (this.building.contributed * 100).toFixed(2)
+            return (this.$store.state.buildings[this.buildingtype].progress * 100).toFixed(2)
         }
     }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '~assets/css/variables.scss';
-
-.building-box {
-    display: inline-block;
-    border: solid 1px black;
-    padding: 8px;
-    width: 256px;
-
-    h2 {
-        margin: 0;
-    }
-}
-
-.building-box:not(:last-child) {
-    margin-right: 8px;
-}
-</style>

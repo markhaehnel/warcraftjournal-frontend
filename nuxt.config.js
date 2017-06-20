@@ -6,20 +6,20 @@ module.exports = {
         title: 'The Warcraft Journal',
         meta: [
             { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
             { hid: 'description', name: 'description', content: 'Statistics and calculations on World of Warcraft data.' }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Bree+Serif|Source+Sans+Pro' }
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro' }
         ]
     },
     /*
     ** Global CSS
     */
     css: [
-        { src: 'normalize-css/normalize.css' },
-        { src: '~assets/css/main.scss', lang: 'scss' }
+        { src: 'bootstrap/dist/css/bootstrap.min.css' },
+        { src: '~assets/less/main.less', lang: 'less' }
     ],
     /*
     ** Add axios globally
@@ -40,7 +40,12 @@ module.exports = {
             }
         }
     },
-    loading: false,
+    cache: {
+        maxAge: 600000 // 10min
+    },
+    router: {
+        linkActiveClass: 'active'
+    },
     env: {
         baseUrl: process.env.API_URL
     }
