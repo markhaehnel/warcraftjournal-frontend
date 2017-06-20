@@ -1,31 +1,32 @@
 <template>
     <div class="card card-inverse">
-        <img class="card-img" src="~assets/images/brokenshore.jpg">
+        <img class="card-img" :src="'/images/buildings/' + this.buildingtype + '.jpg'">
         <div class="card-img-overlay">
             <h4 class="card-title">{{ name }}</h4>
-            <h6 class="card-text">{{ state }}</h6>
+            <h6 class="card-title">{{ state.title }}</h6>
+            <h2 class="card-title">{{ progress }}%</h2>
         </div>
-            <div class="progress">
-                <div class="progress-bar bg-success" v-bind:style="{ width: progress + '%'}" style="height: 24px;" />
-            </div>
+        <div class="progress">
+            <div class="progress-bar" :class="state.color" v-bind:style="{ width: progress + '%'}" style="height: 24px;" />
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['name', 'buildingtype'],
+    props: ['name', 'buildingtype', 'imgSrc'],
     computed: {
         state () {
             switch (this.$store.state.buildings[this.buildingtype].state) {
-            case 1: return 'Under Construction'
-            case 2: return 'Active'
-            case 3: return 'Under Attack'
-            case 4: return 'Destroyed'
-            default: return 'Unknown State'
+            case 1: return { title: 'Under Construction', color: 'bg-info' }
+            case 2: return { title: 'Active', color: 'bg-success' }
+            case 3: return { title: 'Under Attack', color: 'bg-warning' }
+            case 4: return { title: 'Destroyed', color: 'bg-danger' }
+            default: return { title: 'Unknown State', color: 'bg-info' }
             }
         },
         progress () {
-            return (this.$store.state.buildings[this.buildingtype].progress * 100).toFixed(2)
+            return Math.round(this.$store.state.buildings[this.buildingtype].progress * 100)
         }
     }
 }
