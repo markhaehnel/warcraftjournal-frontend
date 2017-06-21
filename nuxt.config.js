@@ -47,6 +47,6 @@ module.exports = {
         linkActiveClass: 'active'
     },
     env: {
-        baseUrl: process.env.API_URL
+        API_URL: process.env.API_URL
     }
 }
