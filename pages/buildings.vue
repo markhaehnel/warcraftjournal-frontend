@@ -5,13 +5,13 @@
                 <h1 class="mb-5">Broken Shore Buildings</h1>
                 <div class="row">
                     <div class="col-xs-12 col-md-4">
-                        <Building name="Mage Tower" buildingtype="magetower" :buildingdata="magetower" />
+                        <Building :building="magetower" />
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <Building name="Command Center" buildingtype="commandcenter" :buildingdata="commandcenter" />
+                        <Building :building="commandcenter" />
                     </div>
                     <div class="col-xs-12 col-md-4">
-                        <Building name="Nether Disruptor" buildingtype="netherdisruptor" :buildingdata="netherdisruptor" />
+                        <Building :building="netherdisruptor" />
                     </div>
                 </div>
                 <small>Last updated: {{ (new Date(lastupdated)).toUTCString() }}</small>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import Building from '~components/buildings/Building.vue'
+import Building from '~components/Building.vue'
 import api from '~plugins/axios'
 
 export default {
@@ -39,9 +39,27 @@ export default {
         try {
             let { data } = await api.get('/buildings')
             return {
-                magetower: { state: data.magetower.state, progress: data.magetower.contributed },
-                commandcenter: { state: data.commandcenter.state, progress: data.commandcenter.contributed },
-                netherdisruptor: { state: data.netherdisruptor.state, progress: data.netherdisruptor.contributed },
+                magetower: {
+                    title: 'Mage Tower',
+                    state: data.magetower.state,
+                    progress: data.magetower.contributed,
+                    buff1: data.magetower.buff1,
+                    buff2: data.magetower.buff2
+                },
+                commandcenter: {
+                    title: 'Command Center',
+                    state: data.commandcenter.state,
+                    progress: data.commandcenter.contributed,
+                    buff1: data.commandcenter.buff1,
+                    buff2: data.commandcenter.buff2
+                },
+                netherdisruptor: {
+                    title: 'Nether Disruptor',
+                    state: data.netherdisruptor.state,
+                    progress: data.netherdisruptor.contributed,
+                    buff1: data.netherdisruptor.buff1,
+                    buff2: data.netherdisruptor.buff2
+                },
                 lastupdated: data.lastupdated
             }
         } catch (error) {
