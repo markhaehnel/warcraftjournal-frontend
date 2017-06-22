@@ -5,16 +5,18 @@
             <h6 class="card-title">{{ building.title }}</h6>
             <h4 class="card-title font-weight-bold">{{ stateTitle }}</h4>
 
-            <h2 v-if="!(isActive || isDestroyed)" class="card-title">{{ progress }}%</h2>
-            
-            <div v-if="isActive">
-                <div v-if="building.buff1" class="mb-1"><img class="height-24" :src="buff1Image" /> {{ building.buff1.name }}</div>
-                <div v-if="building.buff2"><img class="height-24" :src="buff2Image" /> {{ building.buff2.name }}</div>
+            <div v-if="!isDestroyed">
+                <a v-if="building.buff1" :class="{ 'desaturate': !isActive }" :href="buff1Url" :title="building.buff1.name" target="_blank">
+                    <img style="height: 48px;" :src="buff1Image"></img>
+                </a>
+                <a v-if="building.buff2" :class="{ 'desaturate': !isActive }" :href="buff2Url" :title="building.buff2.name" target="_blank">
+                    <img class="ml-3" style="height: 48px;" :src="buff2Image"></img>
+                </a>
             </div>
         </div>
-        <div class="card-footer">
-           <div class="progress">
-                <div class="progress-bar bg-inverse height-24" v-bind:style="{ width: progress + '%'}" />
+        <div v-if="!isDestroyed" class="card-footer">
+            <div class="progress">
+                <div class="progress-bar bg-inverse height-24" style="line-height: 24px;" v-bind:style="{ width: progress + '%'}">{{ progress }}%</div>
             </div>
         </div>
         
@@ -54,8 +56,17 @@ export default {
         buff2Image () {
             return '/images/spells/' + this.building.buff2.icon + '.jpg'
         },
+        buff1Url () {
+            if (this.building.buff1) return 'http://www.wowhead.com/spell=' + this.building.buff1.id
+        },
+        buff2Url () {
+            if (this.building.buff2) return 'http://www.wowhead.com/spell=' + this.building.buff2.id
+        },
         isActive () {
             return this.building.state === 2
+        },
+        isUnderAttack () {
+            return this.building.state === 3
         },
         isDestroyed () {
             return this.building.state === 4
