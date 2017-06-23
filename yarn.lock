@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@nuxtjs/bootstrap-vue@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/bootstrap-vue/-/bootstrap-vue-1.0.4.tgz#2e661f238543287b4a3c5b49ab5a6368186e2037"
+  dependencies:
+    bootstrap-vue "^0.16.1"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -178,6 +184,10 @@ async@^2.1.2:
   resolved "https://registry.yarnpkg.com/async/-/async-2.4.1.tgz#62a56b279c98a11d0987096a01cc3eeb8eb7bbd7"
   dependencies:
     lodash "^4.14.0"
+
+async@~0.2.6:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -832,7 +842,16 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bootstrap@4.0.0-alpha.6:
+bootstrap-vue@^0.16.1:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-vue/-/bootstrap-vue-0.16.1.tgz#00395c4ab6fe35f2f976cb5e65bc09022ffef7db"
+  dependencies:
+    bootstrap "^4.0.0-alpha.6"
+    tether latest
+    uglify-js-harmony "^2.7.5"
+    vue "^2.2.6"
+
+bootstrap@^4.0.0-alpha.6:
   version "4.0.0-alpha.6"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-alpha.6.tgz#4f54dd33ac0deac3b28407bc2df7ec608869c9c8"
   dependencies:
@@ -4567,7 +4586,7 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-tether@^1.4.0:
+tether@^1.4.0, tether@latest:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/tether/-/tether-1.4.0.tgz#0f9fa171f75bf58485d8149e94799d7ae74d1c1a"
 
@@ -4647,6 +4666,15 @@ type-is@~1.6.15:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+uglify-js-harmony@^2.7.5:
+  version "2.7.7"
+  resolved "https://registry.yarnpkg.com/uglify-js-harmony/-/uglify-js-harmony-2.7.7.tgz#6a43993211fa5da2f1e58416d61f329327eef335"
+  dependencies:
+    async "~0.2.6"
+    source-map "~0.5.1"
+    uglify-to-browserify "~1.0.0"
+    yargs "~3.10.0"
 
 uglify-js@3.0.x:
   version "3.0.15"
@@ -4846,7 +4874,7 @@ vue-template-es2015-compiler@^1.2.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.5.2.tgz#a0a6c50c941d2a4abda963f2f42c337ac450ee95"
 
-vue@~2.3.3:
+vue@^2.2.6, vue@~2.3.3:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.4.tgz#5ec3b87a191da8090bbef56b7cfabd4158038171"
 

@@ -13,9 +13,9 @@
         "precommit": "npm run lint"
     },
     "dependencies": {
+        "@nuxtjs/bootstrap-vue": "^1.0.4",
         "axios": "^0.16.2",
         "babel-eslint": "^7.2.3",
-        "bootstrap": "4.0.0-alpha.6",
         "cross-env": "^5.0.1",
         "eslint": "3.19.0",
         "eslint-config-standard": "^10.2.1",

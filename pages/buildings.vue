@@ -1,35 +1,32 @@
 <template>
     <div class="container">
-        <div class="centered text-center">
+        <div class="centered">
             <div v-if="!error">
                 <h1 class="mb-5">Broken Shore Buildings</h1>
                 <div class="row">
-                    <div class="col-xs-12 col-md-4">
-                        <Building :building="magetower" />
+                    <div class="col-md-6 col-lg-4">
+                        <Building :building="magetower"></Building>
                     </div>
-                    <div class="col-xs-12 col-md-4">
-                        <Building :building="commandcenter" />
+                    <div class="col-md-6 col-lg-4">
+                        <Building :building="commandcenter"></Building>
                     </div>
-                    <div class="col-xs-12 col-md-4">
-                        <Building :building="netherdisruptor" />
+                    <div class="col-md-6 col-lg-4">
+                        <Building :building="netherdisruptor"></Building>
                     </div>
                 </div>
                 <small>Last updated: {{ (new Date(lastupdated)).toUTCString() }}</small>
             </div>
-            <div v-else>
-                <span class="display-3 d-inline-block rotate-90">=(</span><br>
-                <hr class="my-4" />
-                <p class="lead">We are experiencing some issues while fetching Broken Shore building data.</p>
-                <a href="." class="btn btn-primary">Try again</a>
-            </div>       
+            <buildings-error v-else></buildings-error>
+                 
         </div>
         
     </div>
 </template>
 
 <script>
-import Building from '~components/Building.vue'
 import api from '~plugins/axios'
+import Building from '~components/buildings/Building.vue'
+import BuildingsError from '~components/buildings/BuildingsError.vue'
 
 export default {
     data () {
@@ -67,7 +64,8 @@ export default {
         }
     },
     components: {
-        Building
+        Building,
+        BuildingsError
     }
 }
 </script>

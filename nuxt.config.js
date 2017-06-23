@@ -40,6 +40,7 @@ module.exports = {
             }
         }
     },
+    modules: ['@nuxtjs/bootstrap-vue'],
     cache: {
         maxAge: 600000 // 10min
     },
