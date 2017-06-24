@@ -11,7 +11,7 @@
                 <b-nav is-nav-bar class="ml-auto">
                     <nuxt-link exact class="nav-link" to="/">Home</nuxt-link>
                     <nuxt-link exact class="nav-link" to="/buildings">Buildings</nuxt-link>
-                    <nuxt-link exact class="nav-link" to="/affixes">Mythic+ Affixes</nuxt-link>
+                    <nuxt-link exact class="nav-link" to="/mythic-plus/affixes">Mythic+ Affixes</nuxt-link>
                 </b-nav>
             </b-collapse>
         </div>
