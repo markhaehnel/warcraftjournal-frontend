@@ -1,5 +1,5 @@
 <template>
-    <div class="card card-inverse mb-3" :class="{ 'card-active': isActive }">
+    <div class="card card-inverse mb-3" :class="borderStyles">
         <div class="card-background" :class="{ 'desaturate': !isActive }" :style="{ 'background-image': 'url('+cardImage+')' }"></div>
         <div class="card-block">
             <div class="row">
@@ -13,8 +13,8 @@
                     </b-tooltip>
                 </div>
                 <div v-if="!isDestroyed" class="col col-md-auto text-right">
-                    <buff class="mb-3" :buff="buffMain" :isActive="isActive"></buff>
-                    <buff :buff="buffSecondary" :isActive="isActive"></buff>
+                    <buff class="mb-3" :buff="buffMain" :isActive="isActive || isUnderAttack" :isUnderAttack="isUnderAttack"></buff>
+                    <buff :buff="buffSecondary" :isActive="isActive || isUnderAttack" :isUnderAttack="isUnderAttack"></buff>
                 </div>
             </div>
         </div>
@@ -77,20 +77,34 @@ export default {
         },
         isDestroyed () {
             return this.building.state === 4
+        },
+        borderStyles () {
+            return {
+                'card-green': this.isActive,
+                'card-orange': this.isUnderAttack,
+                'card-red': this.isDestroyed
+            }
         }
     },
     components: { Buff }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .card {
+    @borderColor: #9f9f9f;
+    box-shadow: 0 0 0 2px darken(@borderColor, 25%), 0 0 0 4px @borderColor;
     border: none;
-    box-shadow: 0 0 0 2px #3c3e3f, 0 0 0 4px #9f9f9f;
 }
 
-.card-active {
-    box-shadow: 0 0 0 3px #2e6509, 0 0 0 5px #74ed12;
+.card-green {
+    @borderColor: #74ed12;
+    box-shadow: 0 0 0 2px darken(@borderColor, 25%), 0 0 0 4px @borderColor;
+}
+
+.card-orange {
+    @borderColor: #f8b732;
+    box-shadow: 0 0 0 2px darken(@borderColor, 25%), 0 0 0 4px @borderColor;
 }
 
 .card-background {

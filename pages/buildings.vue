@@ -16,7 +16,7 @@
                 </div>
                 <small>Last updated: {{ (new Date(lastupdated)).toUTCString() }}</small>
             </div>
-            <buildings-error v-else></buildings-error>
+            <error message="We are experiencing some issues while fetching Broken Shore building data." v-else></error>
                  
         </div>
         
@@ -26,7 +26,7 @@
 <script>
 import api from '~plugins/axios'
 import Building from '~components/buildings/Building.vue'
-import BuildingsError from '~components/buildings/BuildingsError.vue'
+import Error from '~components/Error.vue'
 
 export default {
     data () {
@@ -65,7 +65,7 @@ export default {
     },
     components: {
         Building,
-        BuildingsError
+        Error
     }
 }
 </script>

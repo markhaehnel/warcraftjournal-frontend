@@ -1,10 +1,11 @@
 <template>
     <nav class="navbar navbar-toggleable-xl navbar-light dropshadow ">
         <div class="container">
-            <h1 class="navbar-brand mb-0" href="#">The Warcraft Journal</h1>
+            <nuxt-link to="/"><h1 class="navbar-brand mb-0">The Warcraft Journal</h1></nuxt-link>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
                 <nuxt-link class="nav-link" to="/">Home</nuxt-link>
                 <nuxt-link class="nav-link" to="/buildings">Buildings</nuxt-link>
+                <nuxt-link class="nav-link" to="/affixes">M+ Affixes</nuxt-link>
             </div>
         </div>
     </nav>
