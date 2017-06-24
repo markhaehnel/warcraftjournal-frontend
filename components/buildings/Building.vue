@@ -49,8 +49,7 @@ export default {
             if (this.building.buff2) {
                 return {
                     ...this.building.buff2,
-                    icon: `/images/spells/${this.building.buff2.icon}.jpg`,
-                    wowhead: `http://www.wowhead.com/spell=${this.building.buff2.id}`
+                    icon: `/images/spells/${this.building.buff2.icon}.jpg`
                 }
             }
         },

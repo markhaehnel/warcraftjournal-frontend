@@ -1,8 +1,6 @@
 <template>
-    <b-popover placement="left" :title="buff.name" :content="buff.description" triggers="hover">
-        <a :class="{ 'desaturate': !isActive }" :href="buff.wowhead" target="_blank">
-            <img class="buff" :class="{ 'buff-active': isActive }" :src="buff.icon"></img>
-        </a>
+    <b-popover placement="left" :title="buff.name" :content="buff.description" :triggers="[ 'click', 'hover' ]" :debounce="0">
+        <img class="buff" :class="{ 'buff-active': isActive, 'desaturate': !isActive }" style="cursor: pointer" :src="buff.icon"></img>
     </b-popover>
 </template>
 

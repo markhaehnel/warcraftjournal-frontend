@@ -1,14 +1,21 @@
 <template>
-    <nav class="navbar navbar-toggleable-xl navbar-light dropshadow ">
-        <div class="container">
-            <nuxt-link to="/"><h1 class="navbar-brand mb-0">The Warcraft Journal</h1></nuxt-link>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-                <nuxt-link class="nav-link" to="/">Home</nuxt-link>
-                <nuxt-link class="nav-link" to="/buildings">Buildings</nuxt-link>
-                <nuxt-link class="nav-link" to="/affixes">M+ Affixes</nuxt-link>
-            </div>
+    <b-navbar toggleable class="dropshadow">
+        <div class="container static">
+            <b-nav-toggle target="nav_collapse"></b-nav-toggle>
+        
+            <b-link class="navbar-brand" to="/">
+                <h1 class="navbar-brand">The Warcraft Journal</h1>
+            </b-link>
+        
+            <b-collapse is-nav id="nav_collapse">
+                <b-nav is-nav-bar class="ml-auto">
+                    <nuxt-link exact class="nav-link" to="/">Home</nuxt-link>
+                    <nuxt-link exact class="nav-link" to="/buildings">Buildings</nuxt-link>
+                    <nuxt-link exact class="nav-link" to="/affixes">Mythic+ Affixes</nuxt-link>
+                </b-nav>
+            </b-collapse>
         </div>
-    </nav>
+    </b-navbar>
 </template>
 
 <style lang="less">
@@ -20,6 +27,8 @@
 h1.navbar-brand {
     font-family: @fontHeading;
     font-weight: 700;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-link:hover {
@@ -28,5 +37,10 @@ h1.navbar-brand {
 
 .dropshadow {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler {
+    border-radius: 0;
+    border: none;
 }
 </style>
