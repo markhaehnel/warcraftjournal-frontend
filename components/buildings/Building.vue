@@ -128,4 +128,8 @@ export default {
     line-height: 8px;
     background-color: lightgray;
 }
+
+.tooltip-inner {
+  background-color: #fff;
+}
 </style>

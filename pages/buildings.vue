@@ -2,7 +2,7 @@
     <div class="container">
         <div class="centered">
             <div v-if="!error">
-                <h1 class="mb-5">Broken Shore Buildings</h1>
+                <h1 class="mb-4">Broken Shore Buildings</h1>
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <Building :building="magetower"></Building>
