@@ -2,7 +2,7 @@
     <div class="site">
         <div class="site-content">
             <site-header></site-header>
-            <div class="container">
+            <div class="container" style="margin-top: 76px">
                 <nuxt></nuxt>
             </div>
         </div>
