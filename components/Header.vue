@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable class="dropshadow">
+    <b-navbar toggleable class="dropshadow" fixed="top">
         <div class="container static">
             <b-nav-toggle target="nav_collapse"></b-nav-toggle>
         
@@ -7,7 +7,7 @@
                 <h1 class="navbar-brand">The Warcraft Journal</h1>
             </b-link>
         
-            <b-collapse is-nav id="nav_collapse">
+            <b-collapse is-nav id="nav_collapse" class="no-transition">
                 <b-nav is-nav-bar class="ml-auto">
                     <nuxt-link exact class="nav-link" to="/">Home</nuxt-link>
                     <nuxt-link exact class="nav-link" to="/buildings">Buildings</nuxt-link>
@@ -22,6 +22,7 @@
 @import '~assets/less/variables.less';
 .navbar {
     margin-bottom: 2rem;
+    background-color: white;
 }
 
 h1.navbar-brand {
