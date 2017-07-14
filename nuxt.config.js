@@ -41,7 +41,7 @@ module.exports = {
         }
     },
     modules: [
-        '@nuxtjs/bootstrap-vue',
+        '~plugins/bootstrap',
         '@nuxtjs/manifest'
     ],
     cache: {
