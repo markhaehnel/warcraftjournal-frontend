@@ -40,7 +40,10 @@ module.exports = {
             }
         }
     },
-    modules: ['@nuxtjs/bootstrap-vue'],
+    modules: [
+        '@nuxtjs/bootstrap-vue',
+        '@nuxtjs/manifest'
+    ],
     cache: {
         maxAge: 600000 // 10min
     },
@@ -49,5 +52,14 @@ module.exports = {
     },
     env: {
         API_URL: process.env.API_URL
+    },
+    manifest: {
+        name: 'The Warcraft Journal',
+        short_name: 'Warcraft Journal',
+        background_color: '#fff',
+        description: 'Statistics and calculations on World of Warcraft guild and player data.',
+        lang: 'en',
+        display: 'standalone',
+        theme_color: '#fff'
     }
 }

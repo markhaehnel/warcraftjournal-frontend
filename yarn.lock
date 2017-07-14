@@ -8,6 +8,12 @@
   dependencies:
     bootstrap-vue "^0.16.1"
 
+"@nuxtjs/manifest@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-1.6.0.tgz#4db5e10bd36366e3469f75388b87f5124c0bbe9c"
+  dependencies:
+    hash-sum "^1.0.2"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
