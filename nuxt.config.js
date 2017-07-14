@@ -25,7 +25,10 @@ module.exports = {
     ** Add axios globally
     */
     build: {
-        vendor: ['axios'],
+        vendor: [
+            'axios',
+            'bootstrap-vue'
+        ],
         /*
         ** Run ESLINT on save
         */
