@@ -25,7 +25,7 @@ deploy:
     stage: deploy
     when: manual
     script:
-        - apk add --update openssh-client
+        - apk add --update git openssh-client
         - mkdir -p ~/.ssh
         - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
         - chmod 600 ~/.ssh/id_rsa
