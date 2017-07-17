@@ -10,6 +10,7 @@ before_script:
 stages:
     - lint
     - build
+    - deploy
 
 lint:
     stage: lint
@@ -20,3 +21,13 @@ build:
     stage: build
     script:
         - yarn run build
+
+deploy:
+    stage: deploy
+    when: manual
+    script:
+        - mkdir -p ~/.ssh
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+        - chmod 600 ~/.ssh/id_rsa
+        - ssh-keyscan -H 'warcraftjournal.org' >> ~/.ssh/known_hosts
+        - git push dokku@warcraftjournal.org:warcraftjournal-staging master
