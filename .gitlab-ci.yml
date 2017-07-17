@@ -24,7 +24,8 @@ build:
 deploy:
     stage: deploy
     when: manual
-    only: master
+    only:
+        - master
     script:
         - apk add --update git openssh-client
         - mkdir -p ~/.ssh
