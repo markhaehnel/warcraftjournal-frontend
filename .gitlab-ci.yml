@@ -24,14 +24,12 @@ build:
 deploy:
     stage: deploy
     when: manual
-    variables:
-        SSH_HOST: "warcraftjournal.org"
-        SSH_PORT: 2222
+    only: master
     script:
         - apk add --update git openssh-client
         - mkdir -p ~/.ssh
         - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
         - chmod 600 ~/.ssh/id_rsa
-        - ssh-keyscan -p $SSH_PORT -H '$SSH_HOST' >> ~/.ssh/known_hosts
-        - echo -e 'Host $SSH_HOST\n    Port $SSH_PORT' >> ~/.ssh/config
-        - git push dokku@$SSH_HOST:warcraftjournal-staging master
+        - ssh-keyscan -p 2222 -H 'warcraftjournal.org' >> ~/.ssh/known_hosts
+        - echo -e 'Host warcraftjournal.org\n    Port 2222' >> ~/.ssh/config
+        - git push dokku@warcraftjournal.org:warcraftjournal-staging master
