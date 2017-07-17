@@ -4,9 +4,6 @@ cache:
     paths:
         - node_modules/
 
-before_script:
-    - yarn
-
 stages:
     - lint
     - build
@@ -15,17 +12,20 @@ stages:
 lint:
     stage: lint
     script:
+        - yarn
         - yarn run lint
 
 build:
     stage: build
     script:
+        - yarn
         - yarn run build
 
 deploy:
     stage: deploy
     when: manual
     script:
+        - apk add --update openssh-client
         - mkdir -p ~/.ssh
         - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
         - chmod 600 ~/.ssh/id_rsa
