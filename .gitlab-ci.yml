@@ -30,4 +30,5 @@ deploy:
         - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
         - chmod 600 ~/.ssh/id_rsa
         - ssh-keyscan -H 'warcraftjournal.org' >> ~/.ssh/known_hosts
-        - git push ssh://dokku@warcraftjournal.org:2222/warcraftjournal-staging master
+        - echo -e 'Host warcraftjournal.org\n    Port 2222' >> ~/.ssh/config
+        - git push dokku@warcraftjournal.org:warcraftjournal-staging master
