@@ -10,6 +10,6 @@
 
 <style scoped>
 .welcome {
-    margin-top: 15vh;
+    margin-top: 35vh;
 }
 </style>

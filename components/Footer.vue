@@ -1,7 +1,7 @@
 <template>
-    <footer>
+    <footer class="pt-3">
         <div class="container centered">
-            <p class="mb-0">Copyright &copy; {{year}} The Warcraft Journal : <a href="https://warcraftjournal.org">warcraftjournal.org</a></p>
+            <p class="mb-0">&copy; {{year}} The Warcraft Journal</p>
             <p><small>World of Warcraft, Warcraft, Battle.net and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.</small></p>
         </div>
     </footer>
@@ -16,3 +16,13 @@ export default {
     }
 }
 </script>
+
+<style lang="less">
+@import '~assets/less/variables.less';
+
+footer {
+    color: @textLight;
+    background-color: @backgroundDark;
+    box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 1);
+}
+</style>
