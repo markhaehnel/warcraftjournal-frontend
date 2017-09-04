@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Buff from '~components/buildings/Buff.vue'
+import Buff from '~/components/buildings/Buff.vue'
 
 let states = [
     { title: 'Unknown State', colorClass: 'bg-info' },

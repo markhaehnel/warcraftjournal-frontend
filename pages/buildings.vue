@@ -24,9 +24,9 @@
 </template>
 
 <script>
-import api from '~plugins/axios'
-import Building from '~components/buildings/Building.vue'
-import Error from '~components/Error.vue'
+import api from '~/plugins/axios'
+import Building from '~/components/buildings/Building.vue'
+import Error from '~/components/Error.vue'
 
 export default {
     data () {

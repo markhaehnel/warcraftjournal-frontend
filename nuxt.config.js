@@ -19,7 +19,7 @@ module.exports = {
     */
     css: [
         { src: 'bootstrap/dist/css/bootstrap.min.css' },
-        { src: '~assets/less/main.less', lang: 'less' }
+        { src: '~/assets/less/main.less', lang: 'less' }
     ],
     /*
     ** Add axios globally

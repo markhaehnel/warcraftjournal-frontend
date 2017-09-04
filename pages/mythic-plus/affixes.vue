@@ -73,8 +73,8 @@
 </template>
 
 <script>
-import api from '~plugins/axios'
-import Error from '~components/Error.vue'
+import api from '~/plugins/axios'
+import Error from '~/components/Error.vue'
 
 let affixes = [
     { id: 2, name: 'Skittish', difficulty: 2, level: 1, description: 'Tanks generate 75% less threat.' },
