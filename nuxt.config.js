@@ -18,7 +18,6 @@ module.exports = {
     ** Global CSS
     */
     css: [
-        { src: 'bootstrap/dist/css/bootstrap.min.css' },
         { src: '~/assets/less/main.less', lang: 'less' }
     ],
     /*
@@ -44,7 +43,7 @@ module.exports = {
         }
     },
     modules: [
-        '~plugins/bootstrap',
+        '@nuxtjs/bootstrap-vue',
         '@nuxtjs/manifest'
     ],
     cache: {
