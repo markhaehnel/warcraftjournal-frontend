@@ -97,7 +97,7 @@ export default {
     },
     async asyncData ({ app }) {
         try {
-            let { data } = await app.$axios.$get('/mythicplus/affixes')
+            let data = await app.$axios.$get('/mythicplus/affixes')
             return { apiAffixes: data.affixes }
         } catch (error) {
             return { error: true }

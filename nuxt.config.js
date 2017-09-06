@@ -43,7 +43,7 @@ module.exports = {
         }
     },
     modules: [
-        ['@nuxtjs/axios', { baseURL: process.env.API_URL }],
+        ['@nuxtjs/axios', { baseURL: process.env.API_URL, credentials: false }],
         '@nuxtjs/bootstrap-vue',
         '@nuxtjs/manifest'
     ],
