@@ -2,9 +2,18 @@
 # yarn lockfile v1
 
 
-"@nuxtjs/bootstrap-vue@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/bootstrap-vue/-/bootstrap-vue-2.0.1.tgz#3b22d24df61666f2f053f218184b55f6b48091b8"
+"@nuxtjs/axios@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-4.0.1.tgz#a78dae4d86a28834edd00845e09f1c8dd865494f"
+  dependencies:
+    axios "^0.16.2"
+    chalk "^2.1.0"
+    debug "^3.0.1"
+    whatwg-url "^6.1.0"
+
+"@nuxtjs/bootstrap-vue@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/bootstrap-vue/-/bootstrap-vue-2.0.2.tgz#3171bf385d39506b405ee4894842fc95bd598725"
   dependencies:
     bootstrap-vue "^1.0.0-beta.7"
 
@@ -751,9 +760,9 @@ babel-preset-es2015@^6.24.1:
     babel-plugin-transform-es2015-unicode-regex "^6.24.1"
     babel-plugin-transform-regenerator "^6.24.1"
 
-babel-preset-vue-app@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-vue-app/-/babel-preset-vue-app-1.2.1.tgz#2f6b71890a21a675019ca1db8d0da15bf017ba24"
+babel-preset-vue-app@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-vue-app/-/babel-preset-vue-app-1.3.0.tgz#4b31f690a353c8735963e06927a072a0bb82126f"
   dependencies:
     babel-plugin-syntax-dynamic-import "^6.18.0"
     babel-plugin-transform-object-rest-spread "^6.26.0"
@@ -1418,7 +1427,7 @@ css-color-names@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"
 
-css-loader@^0.28.6:
+css-loader@^0.28.7:
   version "0.28.7"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.7.tgz#5f2ee989dd32edd907717f953317656160999c1b"
   dependencies:
@@ -3048,6 +3057,10 @@ lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
+lodash.sortby@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
+
 lodash.template@^4.2.4, lodash.template@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.4.0.tgz#e73a0385c8355591746e020b99679c690e68fba0"
@@ -3376,9 +3389,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt@1.0.0-rc8:
-  version "1.0.0-rc8"
-  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.0.0-rc8.tgz#e073f1b0ce8938b4d0552b1ef68ea70a28d77945"
+nuxt@^1.0.0-rc9:
+  version "1.0.0-rc9"
+  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.0.0-rc9.tgz#74bb73f85b1e92a8ad7d7108386fbecccbe7a3d4"
   dependencies:
     "@nuxtjs/youch" "3.0.2"
     ansi-html "^0.0.7"
@@ -3386,13 +3399,13 @@ nuxt@1.0.0-rc8:
     babel-core "^6.26.0"
     babel-loader "^7.1.2"
     babel-preset-es2015 "^6.24.1"
-    babel-preset-vue-app "^1.2.1"
+    babel-preset-vue-app "^1.3.0"
     chalk "^2.1.0"
     chokidar "^1.7.0"
     clone "^2.1.1"
     compression "^1.7.0"
     connect "^3.6.3"
-    css-loader "^0.28.6"
+    css-loader "^0.28.7"
     debug "^3.0.1"
     es6-promise "^4.1.1"
     etag "^1.8.0"
@@ -3422,7 +3435,7 @@ nuxt@1.0.0-rc8:
     serve-static "^1.12.4"
     server-destroy "^1.0.1"
     source-map "^0.5.7"
-    source-map-support "^0.4.16"
+    source-map-support "^0.4.17"
     tappable "^1.1.0"
     url-loader "^0.5.9"
     vue "~2.4.2"
@@ -4775,7 +4788,7 @@ source-list-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.0.tgz#aaa47403f7b245a92fbc97ea08f250d6087ed085"
 
-source-map-support@^0.4.15, source-map-support@^0.4.16:
+source-map-support@^0.4.15, source-map-support@^0.4.17:
   version "0.4.17"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.17.tgz#6f2150553e6375375d0ccb3180502b78c18ba430"
   dependencies:
@@ -5025,6 +5038,10 @@ tough-cookie@~2.3.0:
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.2.tgz#f081f76e4c85720e6c37a5faced737150d84072a"
   dependencies:
     punycode "^1.4.1"
+
+tr46@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
 
 trim-right@^1.0.1:
   version "1.0.1"
@@ -5292,6 +5309,10 @@ watchpack@^1.4.0:
     chokidar "^1.7.0"
     graceful-fs "^4.1.2"
 
+webidl-conversions@^4.0.1:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
+
 webpack-bundle-analyzer@^2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.9.0.tgz#b58bc34cc30b27ffdbaf3d00bf27aba6fa29c6e3"
@@ -5364,6 +5385,14 @@ webpack@^3.5.5:
     watchpack "^1.4.0"
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
+
+whatwg-url@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-6.1.0.tgz#5fc8279b93d75483b9ced8b26239854847a18578"
+  dependencies:
+    lodash.sortby "^4.7.0"
+    tr46 "~0.0.3"
+    webidl-conversions "^4.0.1"
 
 whet.extend@~0.9.9:
   version "0.9.9"

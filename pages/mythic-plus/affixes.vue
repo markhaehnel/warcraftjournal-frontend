@@ -73,7 +73,6 @@
 </template>
 
 <script>
-import api from '~/plugins/axios'
 import Error from '~/components/Error.vue'
 
 let affixes = [
@@ -96,9 +95,9 @@ export default {
     data () {
         return { error: false }
     },
-    async asyncData () {
+    async asyncData ({ app }) {
         try {
-            let { data } = await api.get('/mythicplus/affixes')
+            let { data } = await app.$axios.$get('/mythicplus/affixes')
             return { apiAffixes: data.affixes }
         } catch (error) {
             return { error: true }

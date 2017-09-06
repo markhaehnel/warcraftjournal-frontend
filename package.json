@@ -13,9 +13,9 @@
         "precommit": "npm run lint"
     },
     "dependencies": {
-        "@nuxtjs/bootstrap-vue": "^2.0.1",
+        "@nuxtjs/axios": "^4.0.1",
+        "@nuxtjs/bootstrap-vue": "^2.0.2",
         "@nuxtjs/manifest": "^1.6.1",
-        "axios": "^0.16.2",
         "babel-eslint": "^7.2.3",
         "bootstrap-vue": "^1.0.0-beta.7",
         "cross-env": "^5.0.5",
@@ -29,7 +29,7 @@
         "eslint-plugin-standard": "^3.0.1",
         "less": "^2.7.2",
         "less-loader": "^4.0.5",
-        "nuxt": "1.0.0-rc8",
+        "nuxt": "^1.0.0-rc9",
         "vue": "2.4.2",
         "vue-server-renderer": "2.4.2",
         "vue-template-compiler": "2.4.2"
