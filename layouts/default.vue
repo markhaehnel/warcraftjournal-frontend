@@ -1,8 +1,8 @@
 <template>
     <div class="site">
-        <div class="site-content">
+        <div class="site-content pb-3">
             <site-header></site-header>
-            <div class="container" style="margin-top: 76px">
+            <div class="container">
                 <nuxt></nuxt>
             </div>
         </div>

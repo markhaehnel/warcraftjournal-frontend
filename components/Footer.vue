@@ -1,8 +1,8 @@
 <template>
-    <footer class="pt-3">
+    <footer class="pt-3 pb-3">
         <div class="container centered">
             <p class="mb-0">&copy; {{year}} The Warcraft Journal</p>
-            <p><small>World of Warcraft, Warcraft, Battle.net and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.</small></p>
+            <p class="mb-0"><small>World of Warcraft, Warcraft, Battle.net and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.</small></p>
         </div>
     </footer>
 </template>

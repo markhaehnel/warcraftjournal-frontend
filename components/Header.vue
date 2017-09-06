@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable class="dropshadow" fixed="top">
+    <b-navbar toggleable class="dropshadow" :sticky="true">
         <div class="container static">
             <b-nav-toggle target="nav_collapse"></b-nav-toggle>
         
