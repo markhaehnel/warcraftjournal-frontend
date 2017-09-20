@@ -36,4 +36,4 @@ deploy:
         - git push dokku@warcraftjournal.org:warcraftjournal-staging master
     environment:
         name: staging
-        url: https://staging.example.com
+        url: https://staging.warcraftjournal.org
