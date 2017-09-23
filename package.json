@@ -5,7 +5,7 @@
     "author": "Mark Hähnel <hello@markhaehnel.de> (https://markhaehnel.de/)",
     "private": true,
     "scripts": {
-        "dev": "cross-env HOST=0.0.0.0 nuxt",
+        "dev": "nuxt",
         "build": "nuxt build",
         "start": "nuxt start",
         "generate": "nuxt generate",
@@ -13,28 +13,26 @@
         "precommit": "npm run lint"
     },
     "dependencies": {
-        "@nuxtjs/axios": "^4.0.1",
-        "@nuxtjs/bootstrap-vue": "^2.0.2",
-        "@nuxtjs/manifest": "^1.6.1",
-        "babel-eslint": "^7.2.3",
-        "bootstrap-vue": "^1.0.0-beta.7",
-        "cross-env": "^5.0.5",
-        "eslint": "^4.6.1",
+        "@nuxtjs/axios": "^4.3.0",
+        "@nuxtjs/manifest": "^1.7.0",
+        "babel-eslint": "^8.0.0",
+        "buefy": "^0.5.2",
+        "eslint": "^4.7.2",
         "eslint-config-standard": "^10.2.1",
         "eslint-loader": "^1.9.0",
-        "eslint-plugin-html": "^3.2.1",
+        "eslint-plugin-html": "^3.2.2",
         "eslint-plugin-import": "^2.7.0",
         "eslint-plugin-node": "^5.1.1",
         "eslint-plugin-promise": "^3.5.0",
         "eslint-plugin-standard": "^3.0.1",
         "less": "^2.7.2",
         "less-loader": "^4.0.5",
-        "nuxt": "^1.0.0-rc9",
+        "nuxt": "^1.0.0-rc11",
         "vue": "2.4.2",
         "vue-server-renderer": "2.4.2",
         "vue-template-compiler": "2.4.2"
     },
     "engines": {
-        "node": "^8.1.0"
+        "node": "^8.5.0"
     }
 }

@@ -25,8 +25,7 @@ module.exports = {
     */
     build: {
         vendor: [
-            'axios',
-            'bootstrap-vue'
+            'axios'
         ],
         /*
         ** Run ESLINT on save
@@ -44,8 +43,10 @@ module.exports = {
     },
     modules: [
         ['@nuxtjs/axios', { baseURL: process.env.API_URL, credentials: false }],
-        '@nuxtjs/bootstrap-vue',
         '@nuxtjs/manifest'
+    ],
+    plugins: [
+        '~/plugins/buefy.js'
     ],
     cache: {
         maxAge: 600000 // 10min
