@@ -42,7 +42,7 @@ module.exports = {
         }
     },
     modules: [
-        ['@nuxtjs/axios', { baseURL: process.env.API_URL, credentials: false }],
+        ['@nuxtjs/axios', { baseURL: process.env.API_URL || "", credentials: false }],
         '@nuxtjs/manifest'
     ],
     plugins: [
