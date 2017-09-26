@@ -1,9 +1,11 @@
 <template>
-    <div class="text-center">
-        <span class="display-3 d-inline-block rotate-90">=(</span><br>
-        <hr class="my-4">
-        <p class="lead">{{ message }}</p>
-        <a href="javascript:window.location.href=window.location.href" class="btn btn-primary">Try again</a>
+    <div class="has-text-centered">
+        <div class="hero is-error is-large">
+            <div class="hero-body">
+                <h1 class="title smiley">=(</h1>
+                <h2 class="subtitle">{{ message }}</h2>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -12,3 +14,10 @@ export default {
     props: ['message']
 }
 </script>
+
+<style lang="less" scoped>
+.smiley {
+    transform: rotate(90deg);
+    font-size: 7rem;
+}
+</style>

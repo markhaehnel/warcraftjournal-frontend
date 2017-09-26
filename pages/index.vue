@@ -1,14 +1,14 @@
 <template>
-    <div class="text-center welcome">
-        <h1>Welcome to The Warcraft Journal.</h1>
-        <p>Statistics and calculations on World of Warcraft guild and player data.</p>
-        
-        <nuxt-link class="btn btn-primary" to="/mythic-plus/affixes">Mythic+ Affixes</nuxt-link>
+    <div class="hero is-large">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    <strong>Welcome to The Warcraft Journal.</strong>
+                </h1>
+                <h2 class="subtitle">
+                    Statistics and calculations on World of Warcraft guild and player data.
+                </h2>
+            </div>
+        </div>
     </div>
 </template>
-
-<style scoped>
-.welcome {
-    margin-top: 35vh;
-}
-</style>

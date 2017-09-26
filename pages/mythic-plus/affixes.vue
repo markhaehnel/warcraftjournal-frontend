@@ -1,72 +1,72 @@
 <template>
-    <div>
-        <div v-if="!error" class="container">
-            <h1 class="mb-4">Mythic+ Affixes</h1>
-            <div class="float-right">
-                <span class="badge badge-success rounded-0 mr-1">Easy</span>
-                <span class="badge badge-warning rounded-0 mr-1">Medium</span>
-                <span class="badge badge-danger rounded-0">Hard</span>
-            </div>
+    <div class="container">
+        <div v-if="!error">
+            <section class="section">
+                <h1 class="title">Mythic+ Affixes</h1>
+                <h2 class="subtitle">Current affixes:</h2>
+
+                <div class="content">
+                    <div class="columns">
+                        <div class="column" v-for="(affix, i) in currentAffixes" :key="affix.id">
+                            <h1 class="d-inline" :class="{ 'mr-3': (i !== currentAffixes.length - 1) }">
+                                <div class="tag is-radiusless is-large is-fullwidth" :class="getBadgeColorClass(affix.id)">
+                                    {{ affix.name }}
+                                </div>
+                            </h1>
+                            <p class="m-2">
+                                {{ affix.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h1 class="title">All Keystone Effects</h1>
+                <h2 class="subtitle">+4 Keystone Effects</h2>
+                <div class="content">
+                    <div class="columns is-multiline">
+                        <div class="column is-one-third" v-for="affix in getAffixesByLevel(0)" :key="affix.id">
+                            <div class="tag is-radiusless is-medium is-fullwidth" :class="getBadgeColorClass(affix.id)">
+                                {{ affix.name }}
+                            </div>
+                            <p class="m-2">
+                                {{ affix.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="subtitle">+7 Keystone Effects</h2>
+
+                <div class="content">
+                    <div class="columns is-multiline">
+                        <div class="column is-one-third" v-for="affix in getAffixesByLevel(1)" :key="affix.id">
+                            <div class="tag is-radiusless is-medium is-fullwidth" :class="getBadgeColorClass(affix.id)">
+                                {{ affix.name }}
+                            </div>
+                            <p>
+                                {{ affix.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="subtitle">+10 Keystone Effects</h2>
+                <div class="content">
+                    <div class="columns is-multiline">
+                        <div class="column is-one-third" v-for="affix in getAffixesByLevel(2)" :key="affix.id">
+                            <div class="tag is-radiusless is-medium is-fullwidth" :class="getBadgeColorClass(affix.id)">
+                                {{ affix.name }}
+                            </div>
+                            <p>
+                                {{ affix.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
-            <h4>Current affixes:</h4>
-            <div class="row">
-                <div class="col-xs-12 col-md-4" v-for="(affix, i) in currentAffixes" :key="affix.id">
-                    <h1 class="d-inline" :class="{ 'mr-3': (i !== currentAffixes.length - 1) }">
-                        <div class="badge rounded-0 w-100" :class="getBadgeColorClass(affix.id)">
-                            {{ affix.name }}
-                        </div>
-                    </h1>
-                    <p class="m-2">
-                        {{ affix.description }}
-                    </p>
-                </div>
-            </div>
-
-            <hr class="mt-5 mb-5">
-
-            <h2>All Keystone Effects</h2>
-
-            <h5 class="mt-3">+4 Keystone Effects</h5>
-            <div class="row">
-                <div class="col-xs-12 col-md-4" v-for="affix in getAffixesByLevel(0)" :key="affix.id">
-                    <h3 class="d-inline" >
-                        <div class="badge rounded-0 w-100" :class="getBadgeColorClass(affix.id)">
-                            {{ affix.name }}
-                        </div>
-                    </h3>
-                    <p class="m-2">
-                        {{ affix.description }}
-                    </p>
-                </div>
-            </div>
-
-            <h5 class="mt-3">+7 Keystone Effects</h5>
-            <div class="row">
-                <div class="col-xs-12 col-md-4" v-for="affix in getAffixesByLevel(1)" :key="affix.id">
-                    <h3 class="d-inline" >
-                        <div class="badge rounded-0 w-100" :class="getBadgeColorClass(affix.id)">
-                            {{ affix.name }}
-                        </div>
-                    </h3>
-                    <p class="m-2">
-                        {{ affix.description }}
-                    </p>
-                </div>
-            </div>
-
-            <h5 class="mt-3">+10 Keystone Effects</h5>
-            <div class="row">
-                <div class="col-xs-12 col-md-4" v-for="affix in getAffixesByLevel(2)" :key="affix.id">
-                    <h3 class="d-inline" >
-                        <div class="badge rounded-0 w-100" :class="getBadgeColorClass(affix.id)">
-                            {{ affix.name }}
-                        </div>
-                    </h3>
-                    <p class="m-2">
-                        {{ affix.description }}
-                    </p>
-                </div>
-            </div>
         </div>
         <error message="We are experiencing some issues while fetching Mythic+ affix data." v-else></error>
     </div>
@@ -115,9 +115,9 @@ export default {
     methods: {
         getBadgeColorClass (id) {
             switch (affixes.find(x => x.id === id).difficulty) {
-            case 0: return 'badge-success'
-            case 1: return 'badge-warning'
-            case 2: return 'badge-danger'
+            case 0: return 'is-success'
+            case 1: return 'is-warning'
+            case 2: return 'is-danger'
             }
         },
         getAffixesByLevel (level) {

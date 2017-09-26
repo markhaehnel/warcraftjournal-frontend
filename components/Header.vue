@@ -1,46 +1,22 @@
 <template>
-    <b-navbar toggleable class="dropshadow" :sticky="true">
-        <div class="container static">
-            <b-nav-toggle target="nav_collapse"></b-nav-toggle>
-        
-            <b-link class="navbar-brand" to="/">
-                <h1 class="navbar-brand">The Warcraft Journal</h1>
-            </b-link>
-        
-            <b-collapse is-nav id="nav_collapse" class="no-transition">
-                <b-nav is-nav-bar class="ml-auto">
-                    <nuxt-link exact class="nav-link" to="/">Home</nuxt-link>
-                    <nuxt-link exact class="nav-link" to="/mythic-plus/affixes">Mythic+ Affixes</nuxt-link>
-                </b-nav>
-            </b-collapse>
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <nuxt-link class="navbar-item" to="/">The Warcraft Journal</nuxt-link>
+
+                <button class="button navbar-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <nuxt-link exact class="navbar-item" to="/">Home</nuxt-link>
+                    <nuxt-link exact class="navbar-item" to="/mythic-plus/affixes">Mythic+ Affixes</nuxt-link>
+                </div>
+            </div>
         </div>
-    </b-navbar>
+    </nav>
 </template>
-
-<style lang="less">
-@import '~assets/less/variables.less';
-.navbar {
-    margin-bottom: 2rem;
-    background-color: white;
-}
-
-h1.navbar-brand {
-    font-family: @fontHeading;
-    font-weight: 700;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-.dropshadow {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.navbar-toggler {
-    border-radius: 0;
-    border: none;
-}
-</style>

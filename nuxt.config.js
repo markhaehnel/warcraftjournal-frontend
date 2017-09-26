@@ -52,7 +52,7 @@ module.exports = {
         maxAge: 600000 // 10min
     },
     router: {
-        linkActiveClass: 'active'
+        linkActiveClass: 'is-active'
     },
     env: {
         API_URL: process.env.API_URL

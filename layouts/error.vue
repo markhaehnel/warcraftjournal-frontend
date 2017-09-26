@@ -1,15 +1,15 @@
 <template>
-    <section class="container centered text-centered">
+    <div>
         <h1>
             {{ error.statusCode }}
         </h1>
-        <h2 class="info">
+        <h2>
             {{ error.message }}
         </h2>
         <nuxt-link to="/" v-if="error.statusCode === 404">
             Homepage
         </nuxt-link>
-    </section>
+    </div>
 </template>
 <script>
 export default {

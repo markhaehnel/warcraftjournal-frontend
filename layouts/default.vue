@@ -1,10 +1,8 @@
 <template>
-    <div class="site">
-        <div class="site-content pb-3">
+    <div>
+        <div class="site-content">
             <site-header></site-header>
-            <div class="container">
-                <nuxt></nuxt>
-            </div>
+            <nuxt></nuxt>
         </div>
         <site-footer></site-footer>
     </div>
@@ -21,3 +19,9 @@ export default {
     }
 }
 </script>
+
+<style lang="less">
+.site-content {
+    min-height: 100vh;
+}
+</style>
