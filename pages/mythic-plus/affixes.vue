@@ -8,14 +8,7 @@
                 <div class="content">
                     <div class="columns">
                         <div class="column" v-for="(affix, i) in currentAffixes" :key="affix.id">
-                            <h1 class="d-inline" :class="{ 'mr-3': (i !== currentAffixes.length - 1) }">
-                                <div class="tag is-radiusless is-large is-fullwidth" :class="getBadgeColorClass(affix.id)">
-                                    {{ affix.name }}
-                                </div>
-                            </h1>
-                            <p class="m-2">
-                                {{ affix.description }}
-                            </p>
+                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
                         </div>
                     </div>
                 </div>
@@ -27,12 +20,7 @@
                 <div class="content">
                     <div class="columns is-multiline">
                         <div class="column is-one-third" v-for="affix in getAffixesByLevel(0)" :key="affix.id">
-                            <div class="tag is-radiusless is-medium is-fullwidth" :class="getBadgeColorClass(affix.id)">
-                                {{ affix.name }}
-                            </div>
-                            <p class="m-2">
-                                {{ affix.description }}
-                            </p>
+                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
                         </div>
                     </div>
                 </div>
@@ -42,12 +30,7 @@
                 <div class="content">
                     <div class="columns is-multiline">
                         <div class="column is-one-third" v-for="affix in getAffixesByLevel(1)" :key="affix.id">
-                            <div class="tag is-radiusless is-medium is-fullwidth" :class="getBadgeColorClass(affix.id)">
-                                {{ affix.name }}
-                            </div>
-                            <p>
-                                {{ affix.description }}
-                            </p>
+                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
                         </div>
                     </div>
                 </div>
@@ -56,12 +39,7 @@
                 <div class="content">
                     <div class="columns is-multiline">
                         <div class="column is-one-third" v-for="affix in getAffixesByLevel(2)" :key="affix.id">
-                            <div class="tag is-radiusless is-medium is-fullwidth" :class="getBadgeColorClass(affix.id)">
-                                {{ affix.name }}
-                            </div>
-                            <p>
-                                {{ affix.description }}
-                            </p>
+                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
                         </div>
                     </div>
                 </div>
@@ -74,6 +52,7 @@
 
 <script>
 import Error from '~/components/Error.vue'
+import Affix from '~/components/Affix.vue'
 
 let affixes = [
     { id: 2, name: 'Skittish', difficulty: 2, level: 1, description: 'Tanks generate 75% less threat.' },
@@ -113,18 +92,11 @@ export default {
         }
     },
     methods: {
-        getBadgeColorClass (id) {
-            switch (affixes.find(x => x.id === id).difficulty) {
-            case 0: return 'is-success'
-            case 1: return 'is-warning'
-            case 2: return 'is-danger'
-            }
-        },
         getAffixesByLevel (level) {
             return affixes.filter(x => x.level === level)
         }
     },
-    components: { Error }
+    components: { Error, Affix }
 }
 </script>
 
