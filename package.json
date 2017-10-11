@@ -31,6 +31,7 @@
         "nuxt": "^1.0.0-rc11",
         "vue": "2.4.4",
         "vue-server-renderer": "2.4.4",
+        "vue-smooth-scroll": "^1.0.13",
         "vue-template-compiler": "2.4.4"
     },
     "engines": {

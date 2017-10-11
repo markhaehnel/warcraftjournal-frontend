@@ -27,7 +27,8 @@ module.exports = {
     build: {
         vendor: [
             'axios',
-            'buefy'
+            'buefy',
+            'vue-smooth-scroll'
         ],
         /*
         ** Run ESLINT on save
@@ -55,7 +56,8 @@ module.exports = {
         '@nuxtjs/manifest'
     ],
     plugins: [
-        '~/plugins/buefy.js'
+        '~/plugins/buefy.js',
+        '~/plugins/smoothScroll.js'
     ],
     cache: {
         maxAge: 600000 // 10min
