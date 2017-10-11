@@ -73,5 +73,6 @@ module.exports = {
         lang: 'en',
         display: 'standalone',
         theme_color: '#fff'
-    }
+    },
+    loading: '~/components/Loading.vue'
 }
