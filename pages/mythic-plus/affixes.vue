@@ -1,50 +1,54 @@
 <template>
-    <div class="container">
+    <div class="container is-fluid is-marginless">
         <div v-if="!error">
-            <section class="section">
-                <h1 class="title">Mythic+ Affixes</h1>
-                <h2 class="subtitle">Current affixes:</h2>
-
-                <div class="content">
-                    <div class="columns">
-                        <div class="column" v-for="(affix, i) in currentAffixes" :key="affix.id">
-                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+            <div class="hero is-large is-primary is-bold">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title has-text-centered">Mythic+ Affixes</h1>
+                        <h2 class="subtitle has-text-centered">These are the affixes you will face this week. Happy hunting!</h2>
+                        <div class="content">
+                            <div class="columns">
+                                <div class="column" v-for="(affix, i) in currentAffixes" :key="affix.id">
+                                    <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+                                </div>
+                            </div>
                         </div>
+                        <p class="has-text-centered"><a href="#all-keystone-effects"><b-icon icon="expand_more" size="is-large"></b-icon></a></p>
                     </div>
                 </div>
-            </section>
-
-            <section class="section">
-                <h1 class="title">All Keystone Effects</h1>
-                <h2 class="subtitle">+4 Keystone Effects</h2>
-                <div class="content">
-                    <div class="columns is-multiline">
-                        <div class="column is-one-third" v-for="affix in getAffixesByLevel(0)" :key="affix.id">
-                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+            </div>
+            <div class="container">
+                <section class="section">
+                    <h1 class="title" id="all-keystone-effects">All Keystone Effects</h1>
+                    <h2 class="subtitle">+4 Keystone Effects</h2>
+                    <div class="content">
+                        <div class="columns is-multiline">
+                            <div class="column is-one-third" v-for="affix in getAffixesByLevel(0)" :key="affix.id">
+                                <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <h2 class="subtitle">+7 Keystone Effects</h2>
+                    <h2 class="subtitle">+7 Keystone Effects</h2>
 
-                <div class="content">
-                    <div class="columns is-multiline">
-                        <div class="column is-one-third" v-for="affix in getAffixesByLevel(1)" :key="affix.id">
-                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+                    <div class="content">
+                        <div class="columns is-multiline">
+                            <div class="column is-one-third" v-for="affix in getAffixesByLevel(1)" :key="affix.id">
+                                <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <h2 class="subtitle">+10 Keystone Effects</h2>
-                <div class="content">
-                    <div class="columns is-multiline">
-                        <div class="column is-one-third" v-for="affix in getAffixesByLevel(2)" :key="affix.id">
-                            <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+                    <h2 class="subtitle">+10 Keystone Effects</h2>
+                    <div class="content">
+                        <div class="columns is-multiline">
+                            <div class="column is-one-third" v-for="affix in getAffixesByLevel(2)" :key="affix.id">
+                                <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            
+                </section>
+            </div>
         </div>
         <error message="We are experiencing some issues while fetching Mythic+ affix data." v-else></error>
     </div>

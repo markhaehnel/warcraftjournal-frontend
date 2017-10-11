@@ -27,6 +27,7 @@
         "eslint-plugin-standard": "^3.0.1",
         "less": "^2.7.2",
         "less-loader": "^4.0.5",
+        "material-design-icons": "^3.0.1",
         "nuxt": "^1.0.0-rc11",
         "vue": "2.4.4",
         "vue-server-renderer": "2.4.4",
