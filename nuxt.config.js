@@ -25,7 +25,8 @@ module.exports = {
     */
     build: {
         vendor: [
-            'axios'
+            'axios',
+            'buefy'
         ],
         /*
         ** Run ESLINT on save
