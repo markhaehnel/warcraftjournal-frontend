@@ -14,6 +14,7 @@
             <div class="navbar-menu" :class="{ 'is-active': isMenuActive }">
                 <div class="navbar-end">
                     <nuxt-link exact class="navbar-item" to="/">Home</nuxt-link>
+                    <nuxt-link exact class="navbar-item" to="/guilds">Guilds</nuxt-link>
                     <nuxt-link exact class="navbar-item" to="/mythic-plus/affixes">Mythic Dungeons</nuxt-link>
                 </div>
             </div>

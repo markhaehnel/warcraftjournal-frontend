@@ -56,7 +56,7 @@
 
 <script>
 import Error from '~/components/Error.vue'
-import Affix from '~/components/Affix.vue'
+import Affix from '~/components/mythic-plus/Affix.vue'
 
 let affixes = [
     { id: 2, name: 'Skittish', difficulty: 2, level: 1, description: 'Tanks generate 75% less threat.' },
