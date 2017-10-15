@@ -2,9 +2,6 @@
     <footer class="footer">
         <div class="container">
             <div class="content">
-                <div class="is-pulled-right">
-                    <div class="tag is-dark" v-if="commitHash">{{ commitHash }}</div>
-                </div>
                 <p>&copy;
                     <strong>The Warcraft Journal</strong> {{year}}</p>
                 <p class="has-text-justified">
