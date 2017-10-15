@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid is-marginless">
-        <div class="hero is-large">
+        <div class="hero is-fullheight is-info is-bold">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title has-text-centered">Guild Lookup</h1>
@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <button @click="navigateToGuild" class="button is-medium is-fullwidth is-primary">Let's get started</button>
+                                            <button @click="navigateToGuild" class="button is-medium is-fullwidth is-success">Let's get started</button>
                                         </div>
                                     </div>
                                 </div>

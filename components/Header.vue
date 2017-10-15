@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-dark has-dropshadow" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <div div class="navbar-item navbar-brand-font">The Warcraft Journal</div>
@@ -42,5 +42,10 @@ export default {
         color: #000;
         font-weight: 700;
         font-size: 1.4em;
+    }
+
+    .has-dropshadow {
+        box-shadow: 0 -1px 8px black;
+        z-index: 1000;
     }
 </style>
