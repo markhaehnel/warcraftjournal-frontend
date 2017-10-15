@@ -15,7 +15,8 @@
                 <div class="navbar-end">
                     <nuxt-link exact class="navbar-item" to="/">Home</nuxt-link>
                     <nuxt-link exact class="navbar-item" to="/guilds">Guilds</nuxt-link>
-                    <nuxt-link exact class="navbar-item" to="/mythic-plus/affixes">Mythic Dungeons</nuxt-link>
+                    <nuxt-link exact class="navbar-item" to="/token">Token</nuxt-link>
+                    <nuxt-link exact class="navbar-item" to="/mythicplus/affixes">Mythic Dungeons</nuxt-link>
                 </div>
             </div>
         </div>
