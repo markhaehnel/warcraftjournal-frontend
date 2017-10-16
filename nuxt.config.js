@@ -28,7 +28,8 @@ module.exports = {
         vendor: [
             'axios',
             'buefy',
-            'vue-smooth-scroll'
+            'vue-smooth-scroll',
+            'vue-timeago'
         ],
         /*
         ** Run ESLINT on save
@@ -57,7 +58,8 @@ module.exports = {
     ],
     plugins: [
         '~/plugins/buefy.js',
-        '~/plugins/smoothScroll.js'
+        '~/plugins/smoothScroll.js',
+        '~/plugins/timeago.js'
     ],
     cache: {
         maxAge: 600000 // 10min

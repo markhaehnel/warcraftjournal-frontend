@@ -5,7 +5,8 @@
                 <div class="container has-text-centered">
                     <p class="tokenprice">{{ tokenprice }}<span class="subtitle is-5">G</span></p>
                     <h1 class="title">WoW Token</h1>
-                    <span class="tag is-dark">Updated: {{ latupdated }}</span>
+                    <span class="tag is-dark">Updated&nbsp;<timeago :since="token.lastUpdated" :auto-update="1"></timeago></span>
+                    
                 </div>
             </div>
         </div>

@@ -31,7 +31,8 @@
         "vue": "2.4.4",
         "vue-server-renderer": "2.4.4",
         "vue-smooth-scroll": "^1.0.13",
-        "vue-template-compiler": "2.4.4"
+        "vue-template-compiler": "2.4.4",
+        "vue-timeago": "^3.3.6"
     },
     "engines": {
         "node": "^8.5.0"
