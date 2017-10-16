@@ -9,3 +9,60 @@
 .has-shadow {
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
 }
+
+.hero {
+    background-position: center center;
+    background-size: cover;
+
+    &.is-deathknight {
+        background-image: url('~/static/images/classes/backgrounds/blurred/deathknight.jpg');
+    }
+
+    &.is-demonhunter {
+        background-image: url('~/static/images/classes/backgrounds/blurred/demonhunter.jpg');
+    }
+    &.is-druid {
+        background-image: url('~/static/images/classes/backgrounds/blurred/druid.jpg');
+    }
+    &.is-hunter {
+        background-image: url('~/static/images/classes/backgrounds/blurred/hunter.jpg');
+    }
+    &.is-mage {
+        background-image: url('~/static/images/classes/backgrounds/blurred/mage.jpg');
+    }
+    &.is-monk {
+        background-image: url('~/static/images/classes/backgrounds/blurred/monk.jpg');
+    }
+    &.is-paladin {
+        background-image: url('~/static/images/classes/backgrounds/blurred/paladin.jpg');
+    }
+    &.is-priest {
+        background-image: url('~/static/images/classes/backgrounds/blurred/priest.jpg');
+    }
+    &.is-rogue {
+        background-image: url('~/static/images/classes/backgrounds/blurred/rogue.jpg');
+    }
+    &.is-shaman {
+        background-image: url('~/static/images/classes/backgrounds/blurred/shaman.jpg');
+    }
+    &.is-warlock {
+        background-image: url('~/static/images/classes/backgrounds/blurred/warlock.jpg');
+    }
+    &.is-warrior {
+        background-image: url('~/static/images/classes/backgrounds/blurred/warrior.jpg');
+    }
+}
+
+.hover-up {
+    transition: transform 0.2s;
+    &:hover {
+        transform: translate(0, -8px);
+    }
+}
+
+.hover-down {
+    transition: transform 0.2s;
+    &:hover {
+        transform: translate(0, 8px);
+    }
+}

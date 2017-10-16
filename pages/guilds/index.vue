@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid is-marginless">
-        <div class="hero is-fullheight is-info is-bold">
+        <div class="hero is-fullheight is-dark is-warlock">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title has-text-centered">Guild Lookup</h1>

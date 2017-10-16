@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid is-marginless">
-        <div class="hero is-fullheight is-warning is-bold" v-if="!error">
+        <div class="hero is-fullheight is-dark is-druid" v-if="!error">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <p class="tokenprice">{{ tokenprice }}<span class="subtitle is-5">G</span></p>

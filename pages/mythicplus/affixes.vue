@@ -1,7 +1,7 @@
 <template>
     <div class="container is-fluid is-marginless">
         <div v-if="!error">
-            <div class="hero is-fullheight is-primary is-bold">
+            <div class="hero is-fullheight is-dark is-priest">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title has-text-centered">Mythic+ Affixes</h1>
@@ -13,13 +13,13 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="has-text-centered"><a href="#all-keystone-effects" v-smooth-scroll><b-icon icon="expand_more" size="is-large"></b-icon></a></p>
+                        <p class="has-text-centered"><a href="#all-keystone-effects" v-smooth-scroll><b-icon icon="expand_more" type="hover-down" size="is-large"></b-icon></a></p>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <section class="section">
-                    <h1 class="title" id="all-keystone-effects">All Keystone Effects</h1>
+                <section class="section" id="all-keystone-effects">
+                    <h1 class="title">All Keystone Effects</h1>
                     <h2 class="subtitle">+4 Keystone Effects</h2>
                     <div class="content">
                         <div class="columns is-multiline">

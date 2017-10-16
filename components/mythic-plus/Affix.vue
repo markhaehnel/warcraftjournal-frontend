@@ -5,7 +5,7 @@
             <div class="tag is-radiusless is-large is-fullwidth" :class="getBadgeColorClass(difficulty)">{{ name }}</div>
         </header>
         <div class="card-content">
-            <div class="content">
+            <div class="content has-text-justified">
                 {{ description }}
             </div>
         </div>

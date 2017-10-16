@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-dark has-shadow" role="navigation" id="top" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a href="/" class="navbar-item navbar-brand-font">The Warcraft Journal</a>
