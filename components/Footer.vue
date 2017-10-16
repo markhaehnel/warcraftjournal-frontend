@@ -2,6 +2,7 @@
     <footer class="footer">
         <div class="container">
             <div class="content">
+                <p class="has-text-centered"><a href="#top" v-smooth-scroll><b-icon icon="expand_less" type="is-dark hover-up" size="is-large"></b-icon></a></p>
                 <p>&copy;
                     <strong>The Warcraft Journal</strong> {{year}}</p>
                 <p class="has-text-justified">
