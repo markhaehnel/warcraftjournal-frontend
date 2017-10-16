@@ -2,7 +2,7 @@
     <nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <div div class="navbar-item navbar-brand-font">The Warcraft Journal</div>
+                <a href="/" class="navbar-item navbar-brand-font">The Warcraft Journal</a>
 
                 <div class="navbar-burger" :class="{ 'is-active': isMenuActive }" @click="toggleMenu">
                     <span></span>
