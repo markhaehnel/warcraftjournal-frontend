@@ -2,7 +2,7 @@
     <div class="has-text-centered">
         <div class="hero is-error is-large">
             <div class="hero-body">
-                <h1 class="title smiley">=(</h1>
+                <h1 class="title has-text-danger smiley">=(</h1>
                 <h2 class="subtitle">{{ message }}</h2>
             </div>
         </div>

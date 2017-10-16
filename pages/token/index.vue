@@ -3,9 +3,9 @@
         <div class="hero is-fullheight is-warning is-bold" v-if="!error">
             <div class="hero-body">
                 <div class="container has-text-centered">
+                    <p class="tokenprice">{{ tokenprice }}<span class="subtitle is-5">G</span></p>
                     <h1 class="title">WoW Token</h1>
-                    <p class="is-size-1">{{ tokenprice }}<span class="subtitle is-5">G</span></p>
-                    <p class="subtitle is-6">Updated: {{ latupdated }}</p>
+                    <span class="tag is-dark">Updated: {{ latupdated }}</span>
                 </div>
             </div>
         </div>
@@ -30,13 +30,20 @@ export default {
                 }
             }
         } catch (error) {
-            console.log(error)
+            return { error: true }
         }
     },
     computed: {
         tokenprice () { return this.token.price.toLocaleString() },
         latupdated () { return (new Date(this.token.lastUpdated)).toLocaleTimeString() }
     },
-    components: [ Error ]
+    components: { Error }
 }
 </script>
+
+<style scoped>
+.tokenprice {
+    font-size: 5em !important;
+    font-weight: 100;
+}
+</style>
