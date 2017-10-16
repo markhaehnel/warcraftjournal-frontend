@@ -1,7 +1,7 @@
 <template>
     <div class="container is-fluid is-marginless">
         <div v-if="!error">
-            <div class="hero is-large is-primary is-bold">
+            <div class="hero is-fullheight is-primary is-bold">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title has-text-centered">Mythic+ Affixes</h1>
