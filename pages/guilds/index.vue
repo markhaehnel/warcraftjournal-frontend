@@ -11,19 +11,19 @@
                             <div class="card">
                                 <div class="card-content">
                                     <b-field label="Realm">
-                                        <b-autocomplete size="is-medium" :placeholder="randomRealm" v-model="realm" field="name" :keep-first="true" :data="filteredRealms" @select="option => selected = option">
+                                        <b-autocomplete size="is-medium is-radiusless" :placeholder="randomRealm" v-model="realm" field="name" :keep-first="true" :data="filteredRealms" @select="option => selected = option">
                                             <template slot="empty">No realm found</template>
                                         </b-autocomplete>
                                     </b-field>
                                     <div class="field">
                                         <label class="label">Guild</label>
                                         <div class="control">
-                                            <input v-model="guild" class="input is-medium" type="text" placeholder="Your Epic Guild">
+                                            <input @keyup.enter="navigateToGuild" v-model.trim="guild" class="input is-medium is-radiusless" type="text" placeholder="Your Epic Guild">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <button @click="navigateToGuild" class="button is-medium is-fullwidth is-success">Let's get started</button>
+                                            <button @click="navigateToGuild" class="button is-medium is-fullwidth is-success is-radiusless" :disabled="!canSubmit">Let's get started</button>
                                         </div>
                                     </div>
                                 </div>
@@ -55,11 +55,16 @@ export default {
             return this.realms.filter((option) => {
                 return option.name.toLowerCase().indexOf(this.realm.toLowerCase()) >= 0
             }, this)
+        },
+        canSubmit () {
+            return (typeof this.realm === 'string' && this.realm.length > 0 && typeof this.guild === 'string' && this.guild.length > 0)
         }
     },
     methods: {
         navigateToGuild () {
-            this.$router.push({ path: `/guilds/${this.selected.slug}/${this.guild}` })
+            if (this.canSubmit) {
+                this.$router.push({ path: `/guilds/${this.selected.slug}/${this.guild}` })
+            }
         }
     }
 }
