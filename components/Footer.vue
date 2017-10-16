@@ -16,8 +16,7 @@
 export default {
     data () {
         return {
-            year: new Date().getFullYear(),
-            commitHash: process.env.GIT_COMMIT_SHA
+            year: new Date().getFullYear()
         }
     }
 }
