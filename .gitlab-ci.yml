@@ -9,12 +9,6 @@ stages:
     - build
     - deploy
 
-lint:
-    stage: lint
-    script:
-        - yarn
-        - yarn run lint
-
 build:
     stage: build
     script:
