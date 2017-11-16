@@ -2,7 +2,7 @@ FROM node:8-alpine
 
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
-ENV API_URL=https://api.staging.warcraftjournal.org
+ENV API_URL=https://api.warcraftjournal.org
 
 # Create app directory
 WORKDIR /app
