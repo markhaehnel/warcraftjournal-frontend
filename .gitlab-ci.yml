@@ -1,32 +1,27 @@
-image: node:alpine
-
-cache:
-    paths:
-        - node_modules/
+variables:
+    IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
 
 stages:
     - lint
     - build
     - deploy
 
-build:
-    stage: build
+lint:
+    image: node:8-alpine
+    stage: lint
+    cache:
+        paths:
+            - node_modules/
     script:
         - yarn
-        - yarn run build
+        - yarn run lint
 
-deploy:
-    stage: deploy
-    only:
-        - master
+build:
+    image: docker:latest
+    stage: build
+    services:
+        - docker:dind
     script:
-        - apk add --update git openssh-client
-        - mkdir -p ~/.ssh
-        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-        - chmod 600 ~/.ssh/id_rsa
-        - ssh-keyscan -p 2222 -H 'warcraftjournal.org' >> ~/.ssh/known_hosts
-        - echo -e 'Host warcraftjournal.org\n    Port 2222' >> ~/.ssh/config
-        - git push dokku@warcraftjournal.org:warcraftjournal-staging master
-    environment:
-        name: staging
-        url: https://staging.warcraftjournal.org
+        - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+        - docker build -t $IMAGE_TAG .
+        - docker push $IMAGE_TAG
