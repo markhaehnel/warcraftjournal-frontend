@@ -13,7 +13,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="has-text-centered"><a href="#all-keystone-effects" v-smooth-scroll><b-icon icon="expand_more" type="hover-down" size="is-large"></b-icon></a></p>
+                        <p class="has-text-centered"><a href="#all-keystone-effects" v-smooth-scroll><b-icon icon="chevron-down" custom-class="hover-down" size="is-large"></b-icon></a></p>
                     </div>
                 </div>
             </div>
