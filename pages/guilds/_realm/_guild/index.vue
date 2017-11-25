@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid is-marginless">
-        <div class="hero is-small is-info">
+        <div class="hero is-small" :class="factionColor">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">{{ guild.name }}</h1>
@@ -36,7 +36,8 @@ export default {
                     name: data.name,
                     realm: realms.find((realm) => realm.slug === data.realm).name,
                     members: data.members,
-                    lastupdated: data.lastupdated
+                    lastupdated: data.lastupdated,
+                    side: data.side
                 }
             }
         } catch (error) {
@@ -46,6 +47,9 @@ export default {
     computed: {
         lastUpdated () {
             return (new Date(this.guild.lastupdated)).toString()
+        },
+        factionColor () {
+            return (this.guild.side === 0 ? 'is-info' : 'is-danger') || ''
         }
     }
 }
