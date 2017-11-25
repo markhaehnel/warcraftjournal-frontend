@@ -1,7 +1,6 @@
 <template>
     <div class="card is-fullheight">
         <header class="card-header is-success">
-            <!--<p class="card-header-title ">{{ name }}</p>-->
             <div class="tag is-radiusless is-large is-fullwidth" :class="getBadgeColorClass(difficulty)">{{ name }}</div>
         </header>
         <div class="card-content">
