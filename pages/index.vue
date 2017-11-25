@@ -30,7 +30,7 @@
                         <nuxt-link class="column has-text-centered" to="/mythicplus/affixes">
                             <b-icon icon="format-list-numbers" size="is-large"></b-icon>
                             <p class="title is-4">Mythic+</p>
-                            <p class="subtitle">Compare and evaluate gear</p>
+                            <p class="subtitle">Affix information and cycles</p>
                         </nuxt-link>
                     </div>
                 </div>
