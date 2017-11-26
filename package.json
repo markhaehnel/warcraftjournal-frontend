@@ -15,6 +15,7 @@
     "dependencies": {
         "@nuxtjs/axios": "4.5.0",
         "@nuxtjs/manifest": "^2.0.1",
+        "@nuxtjs/meta": "^2.0.1",
         "babel-eslint": "^8.0.2",
         "buefy": "^0.6.1",
         "eslint": "^4.12.0",

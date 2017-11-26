@@ -4,11 +4,6 @@ module.exports = {
     */
     head: {
         title: 'The Warcraft Journal',
-        meta: [
-            { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-            { hid: 'description', name: 'description', content: 'Statistics and calculations on World of Warcraft data.' }
-        ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Bree+Serif' },
@@ -54,7 +49,8 @@ module.exports = {
     },
     modules: [
         ['@nuxtjs/axios', { baseURL: process.env.API_URL || '', credentials: false }],
-        '@nuxtjs/manifest'
+        '@nuxtjs/manifest',
+        '@nuxtjs/meta'
     ],
     plugins: [
         '~/plugins/buefy.js',
@@ -73,7 +69,7 @@ module.exports = {
     },
     manifest: {
         name: 'The Warcraft Journal',
-        short_name: 'Warcraft Journal',
+        short_name: 'TWJ',
         background_color: '#fff',
         description: 'Statistics and calculations on World of Warcraft guild and player data.',
         lang: 'en',
