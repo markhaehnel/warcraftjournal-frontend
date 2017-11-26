@@ -65,7 +65,8 @@ module.exports = {
         linkExactActiveClass: 'is-active'
     },
     env: {
-        API_URL: process.env.API_URL
+        API_URL: process.env.API_URL,
+        CI_COMMIT_SHA: process.env.CI_COMMIT_SHA
     },
     manifest: {
         name: 'The Warcraft Journal',
