@@ -1,22 +1,25 @@
-# {{ name }}
+# Warcraft Journal Web App
 
-> {{ description }}
+Frontend of Warcraft Journal.
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install # Or yarn install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn run dev
+
+# set API url (optional)
+$ export API_URL=https://api.warcraftjournal.org
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn run build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn run generate
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
