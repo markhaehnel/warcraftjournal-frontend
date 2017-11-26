@@ -23,5 +23,5 @@ build:
         - docker:dind
     script:
         - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-        - docker build -t $IMAGE_TAG --build-arg CI_COMMIT_SHA=$CI_COMMIT_SHA .
+        - docker build -t $IMAGE_TAG --build-arg CI_COMMIT_SHA=${CI_COMMIT_SHA:0:8} .
         - docker push $IMAGE_TAG
