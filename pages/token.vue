@@ -35,8 +35,7 @@ export default {
         }
     },
     computed: {
-        tokenprice () { return this.token.price.toLocaleString() },
-        latupdated () { return (new Date(this.token.lastUpdated)).toLocaleTimeString() }
+        tokenprice () { return this.token.price.toLocaleString() }
     },
     components: { Error }
 }
