@@ -5,7 +5,7 @@
                 <div class="container has-text-centered">
                     <p class="tokenprice">{{ tokenprice }}<span class="subtitle is-5">G</span></p>
                     <h1 class="title">WoW Token</h1>
-                    <span class="tag is-dark">Updated&nbsp;<timeago :since="token.lastUpdated" :auto-update="1"></timeago></span>
+                    <span class="tag is-dark">Updated&nbsp;<timeago :since="token.time" :auto-update="1"></timeago></span>
                     
                 </div>
             </div>
@@ -27,7 +27,7 @@ export default {
             return {
                 token: {
                     price: data.price / 10000,
-                    lastUpdated: data.lastupdated
+                    time: data.time
                 }
             }
         } catch (error) {
