@@ -1,6 +1,9 @@
 <template>
     <div class="container-fluid is-marginless">
         <div class="hero is-fullheight is-dark is-druid" v-if="!error">
+            <div class="hero-head">
+                <navigation-bar></navigation-bar>
+            </div>
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <p class="tokenprice">{{ tokenprice }}<span class="subtitle is-5">G</span></p>
@@ -16,6 +19,7 @@
 
 <script>
 import Error from '~/components/Error.vue'
+import NavigationBar from '~/components/Header.vue'
 
 export default {
     data () {
@@ -37,7 +41,7 @@ export default {
     computed: {
         tokenprice () { return this.token.price.toLocaleString() }
     },
-    components: { Error }
+    components: { NavigationBar, Error }
 }
 </script>
 

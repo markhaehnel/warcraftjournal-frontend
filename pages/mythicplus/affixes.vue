@@ -2,13 +2,16 @@
     <div class="container is-fluid is-marginless">
         <div v-if="!error">
             <div class="hero is-fullheight is-dark is-priest">
+                <div class="hero-head">
+                    <navigation-bar></navigation-bar>
+                </div>
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title has-text-centered">Mythic+ Affixes</h1>
                         <h2 class="subtitle has-text-centered">These are the affixes you will face this week. Happy hunting!</h2>
                         <div class="content">
                             <div class="columns">
-                                <div class="column" v-for="(affix, i) in currentAffixes" :key="affix.id">
+                                <div class="column" v-for="(affix,i) in currentAffixes" :key="affix.id">
                                     <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
                                 </div>
                             </div>
@@ -33,6 +36,7 @@
 import Error from '~/components/Error.vue'
 import Affix from '~/components/mythicplus/Affix.vue'
 import AffixSection from '~/components/mythicplus/AffixSection.vue'
+import NavigationBar from '~/components/Header.vue'
 
 import affixes from '~/pages/mythicplus/affixes.json'
 
@@ -62,7 +66,7 @@ export default {
             return affixes.filter(x => x.level === level)
         }
     },
-    components: { Error, Affix, AffixSection }
+    components: { NavigationBar, Error, Affix, AffixSection }
 }
 </script>
 

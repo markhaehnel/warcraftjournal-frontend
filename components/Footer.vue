@@ -1,5 +1,25 @@
 <template>
     <div>
+        <div class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <nuxt-link class="column has-text-centered" to="/guilds">
+                            <p class="title is-4">Guild Lookup</p>
+                            <p class="subtitle">Compare and evaluate gear</p>
+                        </nuxt-link>
+                        <nuxt-link class="column has-text-centered" to="/token">
+                            <p class="title is-4">WoW Token</p>
+                            <p class="subtitle">Current and historical token prices</p>
+                        </nuxt-link>
+                        <nuxt-link class="column has-text-centered" to="/mythicplus/affixes">
+                            <p class="title is-4">Mythic+</p>
+                            <p class="subtitle">Affix information and cycles</p>
+                        </nuxt-link>
+                    </div>
+                </div>
+            </div>
+        </div>
         <newsletter></newsletter>
         <footer class="footer">
             <div class="container">

@@ -7,9 +7,6 @@
                     <div class="container has-text-centered">
                         <h1 class="title">Error {{ error.statusCode }}</h1>
                         <h2 class="subtitle">{{ error.message }}</h2>
-                        <nuxt-link to="/" v-if="error.statusCode === 404">
-                            Homepage
-                        </nuxt-link>
                     </div>
                 </div>
             </div>

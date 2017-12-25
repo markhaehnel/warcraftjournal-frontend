@@ -1,9 +1,8 @@
 <template>
-    <nav class="navbar is-dark has-shadow" role="navigation" id="top" aria-label="main navigation">
+    <nav class="navbar is-transparent" role="navigation" id="top" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a href="/" class="navbar-item navbar-brand-font">The Warcraft Journal</a>
-
                 <div class="navbar-burger" :class="{ 'is-active': isMenuActive }" @click="toggleMenu">
                     <span></span>
                     <span></span>

@@ -1,6 +1,10 @@
 <template>
     <div class="container-fluid is-marginless">
         <div class="hero is-fullheight is-dark is-warlock">
+            <div class="hero-head">
+                <navigation-bar></navigation-bar>
+            </div>
+
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title has-text-centered">Guild Lookup</h1>
@@ -39,6 +43,7 @@
 
 <script>
 import realms from './realms.json'
+import NavigationBar from '~/components/Header.vue'
 
 export default {
     data () {
@@ -66,6 +71,7 @@ export default {
                 this.$router.push({ path: `/guilds/${this.selected.slug}/${this.guild}` })
             }
         }
-    }
+    },
+    components: { NavigationBar }
 }
 </script>

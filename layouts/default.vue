@@ -1,22 +1,15 @@
 <template>
     <div>
-        <div class="site-content">
-            <site-header></site-header>
-            <nuxt></nuxt>
-        </div>
+        <nuxt></nuxt>
         <site-footer></site-footer>
     </div>
 </template>
 
 <script>
-import SiteHeader from '~/components/Header.vue'
 import SiteFooter from '~/components/Footer.vue'
 
 export default {
-    components: {
-        SiteHeader,
-        SiteFooter
-    }
+    components: { SiteFooter }
 }
 </script>
 
