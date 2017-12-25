@@ -12,10 +12,10 @@
                             <div class="field is-grouped">
                                 <div class="control has-icons-left is-expanded">
                                     <b-icon icon="email"></b-icon>
-                                    <input type="email" class="input" placeholder="email address">
+                                    <input type="email" class="input is-radiusless" placeholder="email address">
                                 </div>
                                 <div class="control">
-                                    <input type="submit" value="Subscribe" class="button is-white is-outlined">
+                                    <input type="submit" value="Subscribe" class="button is-white is-outlined is-radiusless">
                                 </div>
                             </div>
                         </form>
