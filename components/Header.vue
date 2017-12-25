@@ -42,4 +42,7 @@ export default {
         font-weight: 700;
         font-size: 1.4em;
     }
+    .is-active {
+        border-bottom: 1px solid;
+    }
 </style>
