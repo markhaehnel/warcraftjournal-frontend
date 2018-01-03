@@ -16,7 +16,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="has-text-centered"><a href="#all-keystone-effects" v-smooth-scroll><b-icon icon="chevron-down" custom-class="has-jump-down-anim" size="is-large"></b-icon></a></p>
+                        <p class="has-text-centered"><a href="#all-keystone-effects" class="is-inline-block has-jump-down-anim" v-smooth-scroll>V</a></p>
                     </div>
                 </div>
             </div>
