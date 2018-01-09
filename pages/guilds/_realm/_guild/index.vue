@@ -11,7 +11,7 @@
         <div class="section">
             <div class="container">
                 <b-table :data="guild.members" :striped="true" :mobile-cards="true" paginated :perPage="20" :default-sort="''" narrowed pagination-simple>
-                    <template scope="props">
+                    <template slot-scope="props">
                         <b-table-column field="name" width="250" label="Name" sortable>{{ props.row.name }}</b-table-column>
                         <b-table-column label="Realm">{{ props.row.realm }}</b-table-column>
                     </template>
