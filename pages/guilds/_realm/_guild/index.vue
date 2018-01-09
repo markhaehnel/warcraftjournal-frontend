@@ -1,10 +1,12 @@
 <template>
     <div class="container-fluid is-marginless">
+	<navigation-bar></navigation-bar>
         <div class="hero is-small" :class="factionColor">
             <div class="hero-body">
                 <div class="container">
-                    <h1 class="title">{{ guild.name }}</h1>
-                    <h2 class="subtitle">{{ guild.realm }}</h2>
+                    <h1 class="title is-marginless">{{ guild.name }}</h1>
+                    <h2 class="subtitle is-marginless">{{ guild.realm }}</h2>
+                    <span class="is-size-7">Updated&nbsp;<timeago :since="lastUpdated" :auto-update="10"></timeago></span>
                 </div>
             </div>
         </div>
@@ -25,6 +27,7 @@
 </template>
 
 <script>
+import NavigationBar from '~/components/Header'
 import realms from '~/pages/guilds/realms.json'
 
 export default {
@@ -51,7 +54,8 @@ export default {
         factionColor () {
             return (this.guild.side === 0 ? 'is-info' : 'is-danger') || ''
         }
-    }
+    },
+    components: { NavigationBar }
 }
 </script>
 
