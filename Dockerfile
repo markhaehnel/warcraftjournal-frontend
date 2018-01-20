@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:9-alpine
 
 ARG CI_COMMIT_SHA
 ARG API_URL=https://api.warcraftjournal.org
