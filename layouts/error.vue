@@ -1,12 +1,13 @@
 <template>
     <div>
         <div class="site-content">
-            <site-header></site-header>
             <div class="hero is-fullheight is-danger is-bold">
+                <div class="hero-head">
+                    <site-header></site-header>
+                </div>
                 <div class="hero-body">
                     <div class="container has-text-centered">
-                        <h1 class="title">Error {{ error.statusCode }}</h1>
-                        <h2 class="subtitle">{{ error.message }}</h2>
+                        <h2 class="title">{{ error.message }}</h2>
                     </div>
                 </div>
             </div>

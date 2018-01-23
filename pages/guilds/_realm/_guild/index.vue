@@ -31,7 +31,15 @@ import NavigationBar from '~/components/Header'
 import realms from '~/pages/guilds/realms.json'
 
 export default {
-    async asyncData ({ app, params }) {
+    validate ({ params }) {
+        if (typeof params.realm !== 'string') return false
+        if (typeof params.guild !== 'string') return false
+
+        if (realms.filter(realm => realm.slug === params.realm).length !== 1) return false
+
+        return true
+    },
+    async asyncData ({ app, params, error }) {
         try {
             let data = await app.$axios.$get(`/guild/${params.realm}/${params.guild}`)
             return {
@@ -43,8 +51,8 @@ export default {
                     side: data.side
                 }
             }
-        } catch (error) {
-            console.log(error)
+        } catch (e) {
+            error({ statusCode: 404, message: `Guild does not exist.` })
         }
     },
     computed: {
