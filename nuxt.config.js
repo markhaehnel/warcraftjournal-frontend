@@ -13,7 +13,7 @@ module.exports = {
     ** Global CSS
     */
     css: [
-        { src: '~/assets/less/_index.less', lang: 'less' }
+        '@/assets/less/_index.less'
     ],
     /*
     ** Add axios globally
