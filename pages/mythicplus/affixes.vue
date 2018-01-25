@@ -11,12 +11,12 @@
                         <h2 class="subtitle has-text-centered">These are the affixes you will face this week. Happy hunting!</h2>
                         <div class="content">
                             <div class="columns">
-                                <div class="column" v-for="(affix,i) in currentAffixes" :key="affix.id">
+                                <div class="column" v-for="(affix, i) in currentAffixes" :key="affix.id">
                                     <affix :name="affix.name" :description="affix.description" :difficulty="affix.difficulty"></affix>
                                 </div>
                             </div>
                         </div>
-                        <p class="has-text-centered"><a href="#all-keystone-effects" class="is-inline-block has-jump-down-anim" v-smooth-scroll>V</a></p>
+                        <p class="has-text-centered"><a href="#all-keystone-effects" class="is-inline-block has-jump-down-anim" v-smooth-scroll><img src="~/assets/svg/arrow-down.svg"></a></p>
                     </div>
                 </div>
             </div>
