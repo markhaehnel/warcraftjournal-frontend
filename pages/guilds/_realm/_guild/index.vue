@@ -1,20 +1,30 @@
 <template>
     <div class="container-fluid is-marginless">
 	<navigation-bar></navigation-bar>
-        <div class="hero is-small" :class="factionColor">
+        <div class="hero is-dark is-shaman">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title is-marginless">{{ guild.name }}</h1>
                     <h2 class="subtitle is-marginless">{{ guild.realm }}</h2>
-                    <span class="is-size-7">Updated&nbsp;<timeago :since="lastUpdated" :auto-update="10"></timeago></span>
+                </div>
+            </div>
+            <div class="hero-foot">
+                <div class="tabs is-boxed is-right">
+                    <div class="container">
+                        <ul>
+                            <li class="is-active">
+                                <a class="is-size-7">Updated&nbsp;<timeago :since="lastUpdated" :auto-update="10"></timeago></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section">
             <div class="container">
-                <b-table :data="guild.members" :striped="true" :mobile-cards="true" paginated :perPage="20" :default-sort="''" narrowed pagination-simple>
+                <b-table :data="guild.members" :striped="true" :mobile-cards="true" :default-sort="''" hoverable>
                     <template slot-scope="props">
-                        <b-table-column field="name" width="250" label="Name" sortable>{{ props.row.name }}</b-table-column>
+                        <b-table-column field="name" width="250" label="Name">{{ props.row.name }}</b-table-column>
                         <b-table-column label="Realm">{{ props.row.realm }}</b-table-column>
                     </template>
                     <template slot="bottom-left">
@@ -58,9 +68,6 @@ export default {
     computed: {
         lastUpdated () {
             return (new Date(this.guild.lastupdated)).toString()
-        },
-        factionColor () {
-            return (this.guild.side === 0 ? 'is-info' : 'is-danger') || ''
         }
     },
     components: { NavigationBar }
