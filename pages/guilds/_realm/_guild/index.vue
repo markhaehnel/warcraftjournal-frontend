@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid is-marginless">
-	<navigation-bar></navigation-bar>
-        <div class="hero is-dark is-shaman">
+	    <navigation-bar></navigation-bar>
+        <div class="hero is-dark is-warlock">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title is-marginless">{{ guild.name }}</h1>
