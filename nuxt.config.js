@@ -47,7 +47,7 @@ module.exports = {
         }
     },
     modules: [
-        ['@nuxtjs/axios', { baseURL: process.env.API_URL || 'https://api.warcraftjournal.org', credentials: false }],
+        ['@nuxtjs/axios', { baseURL: process.env.API_URL || 'https://api.warcraftjournal.org' }],
         '@nuxtjs/manifest',
         '@nuxtjs/meta'
     ],
