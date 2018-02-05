@@ -1,5 +1,8 @@
 # Warcraft Journal Web App
 
+[![Travis](https://img.shields.io/travis/warcraftjournal/frontend/master.svg?style=flat-square)](https://travis-ci.org/warcraftjournal/frontend)
+[![Greenkeeper badge](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io)
+
 Frontend of Warcraft Journal.
 
 ## Build Setup
