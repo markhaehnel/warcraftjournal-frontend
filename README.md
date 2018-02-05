@@ -1,5 +1,7 @@
 # Warcraft Journal Web App
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/warcraftjournal/frontend.svg)](https://greenkeeper.io/)
+
 Frontend of Warcraft Journal.
 
 ## Build Setup
