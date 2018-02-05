@@ -1,0 +1,25 @@
+sudo: required
+
+language: node_js
+node_js:
+  - "9"
+
+services:
+  - docker
+
+stages:
+    - lint
+    - build
+
+jobs:
+  include:
+    - stage: lint
+      script:
+      - yarn
+      - yarn run lint
+    
+    - stage: build
+      script:
+        - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+        - docker build -t warcraftjournal/frontend:$TRAVIS_COMMIT --build-arg CI_COMMIT_SHA=$TRAVIS_COMMIT .
+        - docker push warcraftjournal/frontend:$TRAVIS_COMMIT
